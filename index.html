@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTA San Andreas Stories</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body.light-mode {
-            font-family: 'Arial', sans-serif;
-            background: #ffffff;
-            color: #000000;
-            transition: all 0.3s ease-in-out;
-        }
+    <link rel="icon" href="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" type="image/png">
 
-        body.dark-mode {
-            font-family: 'Arial', sans-serif;
-            background: #222222; /* Darker background for dark mode */
-            color: #e0e0e0; /* Light gray for better readability */
-            transition: all 0.3s ease-in-out;
-        }
+<style>
+body.light-mode {
+font-family: 'Verdana', sans-serif;
+background: #ffffff;
+color: #000000;
+transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode {
+font-family: 'Verdana', sans-serif;
+background: #222222;
+color: #e0e0e0;
+transition: all 0.3s ease-in-out;
+}
 
         header {
             background: #000000;
@@ -42,7 +44,7 @@
         }
 
         body.dark-mode nav {
-            background-color: #111111; /* Darker background for dark mode */
+            background-color: #111111;
             color: #e0e0e0;
         }
 
@@ -68,11 +70,11 @@
         }
 
         body.dark-mode nav a:hover {
-            background-color: #333333; /* Darker hover background for dark mode */
+            background-color: #333333;
         }
 
         section {
-            background-color: #f2f2f2; /* Lighter background for light mode */
+            background-color: #f2f2f2;
             padding: 20px;
             margin: 20px auto;
             border: 2px solid #000000;
@@ -83,8 +85,8 @@
         }
 
         body.dark-mode section {
-            background-color: #333333; /* Darker background for dark mode */
-            border-color: #555555; /* Lighter border for dark mode */
+            background-color: #333333;
+            border-color: #555555;
         }
 
         section h2 {
@@ -97,7 +99,7 @@
 
         body.dark-mode section h2 {
             color: #e0e0e0;
-            border-bottom: 2px solid #555555; /* Lighter border for dark mode */
+            border-bottom: 2px solid #555555;
         }
 
         section p {
@@ -119,7 +121,7 @@
 
         body.dark-mode .credits-list h3 {
             color: #e0e0e0;
-            border-bottom: 1px solid #555555; /* Lighter border for dark mode */
+            border-bottom: 1px solid #555555;
         }
 
         .credits-list ul {
@@ -146,9 +148,9 @@
         }
 
         body.dark-mode footer {
-            background-color: #222222; /* Darker background for dark mode */
+            background-color: #222222;
             color: #e0e0e0;
-            border-top: 3px solid #555555; /* Lighter border for dark mode */
+            border-top: 3px solid #555555;
         }
 
         a {
@@ -183,7 +185,7 @@
         }
 
         body.dark-mode .discord-link {
-            background-color: #0056b3; /* Darker background for dark mode */
+            background-color: #0056b3;
             color: #e0e0e0;
         }
 
@@ -192,7 +194,7 @@
         }
 
         body.dark-mode .discord-link:hover {
-            background-color: #003d7a; /* Even darker hover background for dark mode */
+            background-color: #003d7a;
         }
 
         .icon {
@@ -225,7 +227,7 @@
         }
 
         body.dark-mode section::before {
-            border-top: 2px dashed #555555; /* Lighter border for dark mode */
+            border-top: 2px dashed #555555;
         }
 
         section:first-of-type::before {
@@ -252,7 +254,7 @@
         }
 
         body.dark-mode nav a::before, body.dark-mode .discord-link::before {
-            background-color: #555555; /* Lighter background for dark mode */
+            background-color: #555555;
         }
 
         nav a:hover::before, .discord-link:hover::before {
@@ -301,16 +303,16 @@
         }
 
         body.dark-mode .promotional-screenshots img {
-            border-color: #555555; /* Lighter border for dark mode */
+            border-color: #555555;
         }
 
         /* Toggle Button */
         .toggle-button {
-            position: fixed;
+            position: absolute;
             top: 20px;
             right: 20px;
             padding: 10px 20px;
-            background-color: #000000;
+            background-color: #0056b3;
             color: #ffffff;
             border: none;
             border-radius: 5px;
@@ -319,72 +321,88 @@
             transition: background-color 0.3s ease;
         }
 
-        body.dark-mode .toggle-button {
-            background-color: #444444; /* Darker background for dark mode */
+        .toggle-button:hover {
+            background-color: #003d7a;
         }
 
-        .toggle-button:hover {
-            background-color: #444444;
+        body.dark-mode .toggle-button {
+            background-color: #004080;
         }
 
         body.dark-mode .toggle-button:hover {
-            background-color: #666666; /* Even darker hover background for dark mode */
+            background-color: #002a52;
         }
+
     </style>
 </head>
 <body class="light-mode">
 
 <header>
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="GTA San Andreas Stories Logo">
+    <nav>
+        <a href="#info"><i class="fas fa-info-circle icon"></i>Info</a>
+        <a href="#requirements"><i class="fas fa-cogs icon"></i>Requirements</a>
+        <a href="#credits"><i class="fas fa-star icon"></i>Credits</a>
+        <a href="#manual"><i class="fas fa-book icon"></i>Manual</a>
+        <a href="#youtube"><i class="fab fa-youtube icon"></i>YouTube</a>
+        <a href="#download"><i class="fas fa-download icon"></i>Download</a>
+        <a href="#screenshots"><i class="fas fa-image icon"></i>Screenshots</a>
+    </nav>
 </header>
-
-<nav>
-    <a href="#info"><i class="fas fa-info-circle icon"></i>Info</a>
-    <a href="#credits"><i class="fas fa-star icon"></i>Credits</a>
-    <a href="#youtube"><i class="fab fa-youtube icon"></i>YouTube</a>
-    <a href="#download"><i class="fas fa-download icon"></i>Download</a>
-    <a href="#screenshots"><i class="fas fa-image icon"></i>Screenshots</a>
-</nav>
 
 <section id="info">
     <h2><i class="fas fa-info-circle section-icon"></i>About the Mod</h2>
-    <p><strong>GTA San Andreas Stories</strong>, also known as <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made, work-in-progress mod by <strong>babamohammed2022</strong> that aims to recreate the vibe of the GTA Stories series.</p>
-    <p>The story utilizes <strong>DYOM 8.1</strong> and follows Ryder as he returns to San Andreas in 1987, encountering new adventures and reconnecting with old friends.</p>
-    <p>For more information and a FAQ, join our <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a></p>
-    <p><strong>Disclaimer:</strong> If you are using the <strong>Essential Modpack</strong>, please delete the <strong>Widescreen mod</strong> from Modloader to avoid game crashes on startup. Additionally, be aware that <strong>SAMP</strong> and the <strong>Widescreen mod</strong> are incompatible with the modpack.</p>
+    <p><strong>GTA San Andreas Stories</strong>, also called <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made mod by <strong>babamohammed2022</strong>. It’s still being developed and tries to bring back the feel of the GTA Stories games.</p>
+    <p>This mod uses <strong>DYOM 8.1</strong> and follows Ryder’s return to Los Santos in 1987, where he starts new adventures and meets old friends again.</p>
+    <p>For more details and FAQs, check out our Discord server: <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a></p>
+   <p><strong>Note:</strong> If you use the <strong>Essential Modpack</strong>, remove the <strong>Widescreen mod</strong> from Modloader to avoid crashes. Moreover, <strong>SAMP</strong> is not compatible with the modpack.</p>
+</section>
+
+<section id="requirements">
+    <h2><i class="fas fa-cogs section-icon"></i>Requirements</h2>
+    <p>Ready to jump into Los Santos? Here’s what your PC needs:</p>
+    <ul>
+        <li><strong>Operating System:</strong> Windows 7 or later</li>
+        <li><strong>Processor:</strong> Dual-Core or similar</li>
+        <li><strong>Memory:</strong> 4 GB RAM</li>
+        <li><strong>Graphics:</strong> Integrated Graphics</li>
+        <li><strong>Storage:</strong> 3 GB Free Space</li>
+    </ul>
+    <p>Ensure your system meets these requirements to enjoy a smooth gaming experience in San Andreas!</p>
 </section>
 
 <section id="credits">
     <h2><i class="fas fa-star section-icon"></i>Credits</h2>
     <div class="credits-list">
-        <h3></h3>
+        <h3>Main Contributors</h3>
         <ul>
-            <li><strong>Abdullah</strong>: Lead Missions Designer, Model Creation, Website Development, Creative Suggestions</li>
-            <li><strong>babamohammed2022</strong>: Project Owner, Lead Mission Designer, Storywriting, Screenshots, Model Design, Retextures, Concept Development, Supervision, Animations (credit to Yucark for the original work)</li>
-            <li><strong>Rule Breakers</strong>: Environmental Mapping, Model Creation, Promotional Screenshots</li>
-            <li><strong>FrankoU</strong>: Mapping Specialist, Screenshot Production, Supervisory Role</li>
-            <li><strong>The Small Chese</strong>: Mission Design, Storywriting, Supervision, Creative Direction</li>
-            <li><strong>Avixrune</strong>: Supervision, Creative and Design Suggestions</li>
-            <li><strong>Mike</strong>: Missions, Storywriting, Model Design, Testing, Feedback</li>
-            <li><strong>Cerdquad</strong>: Screenshots, Testing, Animations (credit to Yucark for the original)</li>
-            <li><strong>GTAMissionsCreator</strong>: Video Recording, Testing and Quality Assurance</li>
-            <li><strong>Noobshakespeare</strong>: Retexturing, Testing</li>
-            <li><strong>karammii</strong>: Billboards, Feedback</li>
+            <li><strong>Abdullah</strong>: Lead Missions Designer, Model Creation, Website Development, Creative Suggestions, Writer, and Content Contributor.</li>
+            <li><strong>babamohammed2022</strong>: Project Owner, Lead Mission Designer, Storywriting, Visual Design, Model Design, Retextures, Concept Development, Supervision, Visual Assistance, and Animations (with credit to Yucark for the original work).</li>
+            <li><strong>FrankoU</strong>: Mapping Specialist, Screenshot Production, and Supervisory Role.</li>
+            <li><strong>The Small Chese</strong>: Mission Design, Storywriting, Supervision, and Creative Direction.</li>
+            <li><strong>Avixrune</strong>: Supervision, Creative and Design Suggestions.</li>
+            <li><strong>Mike</strong>: Missions, Storywriting, Model Design, Testing, Feedback, and In-game Photography.</li>
+            <li><strong>Cerdquad</strong>: Screenshots, Testing, and Animations (with credit to Yucark for the original work).</li>
+            <li><strong>GTAMissionsCreator</strong>: Video Recording, Testing, and Quality Assurance.</li>
+            <li><strong>Noobshakespeare</strong>: Retexturing and Testing.</li>
+            <li><strong>karammii</strong>: Billboards and Feedback.</li>
         </ul>
 
         <h3>Special Contributors</h3>
         <ul>
-            <li><strong>14todoeltiempodc</strong>: Weapon Retextures</li>
-            <li><strong>NorthStationX</strong>: Billboards and In-game Advertising</li>
-            <li><strong>Lost MC Claude</strong>: Bug Reporting, Testing</li>
-            <li><strong>MAHMOGAMER</strong>: Project Supervision</li>
-            <li><strong>Bolszewik</strong>: Comprehensive Testing</li>
-            <li><strong>Tix</strong>: Gameplay Testing</li>
-            <li><strong>Raul</strong>: Retextures and Visual Enhancements</li>
+            <li><strong>Rule Breakers</strong>: Environmental Mapping, Model Creation, and Promotional Screenshots.</li>
+            <li><strong>Bolszewik</strong>: In-game Photography (Screenshots).</li>
+            <li><strong>14todoeltiempodc</strong>: Weapon Retextures.</li>
+            <li><strong>NorthStationX</strong>: Billboards and In-game Advertising.</li>
+            <li><strong>Lost MC Claude</strong>: Bug Reporting and Testing.</li>
+            <li><strong>MAHMOGAMER</strong>: Project Supervision.</li>
+            <li><strong>Bolszewik</strong>: Comprehensive Testing.</li>
+            <li><strong>Tix</strong>: Gameplay Testing.</li>
+            <li><strong>Raul</strong>: Retextures and Visual Enhancements.</li>
         </ul>
 
         <h3>Additional Credits</h3>
-        <p>This modpack integrates exceptional work from numerous talented authors within the GTA modding community. Special thanks to <strong>Endochronic</strong>,<strong>SASquad</strong>,<strong>Yucark</strong>, <strong>TheMadeMan</strong>, and many others whose mods and creativity helped bring this project to life. Full credits and detailed acknowledgments can be found within the modpack files.</p>
+        <p>This modpack integrates exceptional work from numerous talented authors within the GTA modding community. Special thanks to <strong>Endochronic</strong>, <strong>SASquad</strong>, <strong>Yucark</strong>, <strong>TheMadeMan</strong>, and many others whose mods and creativity helped bring this project to life. Full credits and detailed acknowledgments can be found within the modpack files.</p>
         <p>We deeply appreciate their incredible work and contributions, which have enhanced the experience of GTA San Andreas Stories.</p>
     </div>
 </section>
@@ -411,9 +429,8 @@
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/image.png" alt="Screenshot 3">
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/argentina-transformed.png" alt="Screenshot 4">
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/likethat.jpg" alt="Screenshot 5">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/niga-transformed.png" alt="Screenshot 6">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale.PNG" alt="Screenshot 7">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale2.PNG" alt="Screenshot 8">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale.PNG" alt="Screenshot 6">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale2.PNG" alt="Screenshot 7">
 </section>
 
 <footer>
@@ -421,20 +438,19 @@
 </footer>
 
 <!-- Toggle Button -->
-<button class="toggle-button" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+<button class="toggle-button" onclick="toggleMode()" id="toggle-button">Toggle Dark/Light Mode</button>
 
 <script>
-    function toggleMode() {
-        const body = document.body;
-        if (body.classList.contains('light-mode')) {
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-        } else {
-            body.classList.remove('dark-mode');
-            body.classList.add('light-mode');
+        function toggleMode() {
+            var body = document.body;
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+            }
         }
-    }
-</script>
-
+    </script>
 </body>
 </html>
