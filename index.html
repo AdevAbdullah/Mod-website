@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #000000, #1a1a1a);
-            color: #ffffff;
+            background: #ffffff;
+            color: #000000;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -17,11 +17,11 @@
         }
 
         header {
-            background: linear-gradient(to bottom, #003366 0%, #004080 100%);
+            background: #000000;
             color: #ffffff;
             padding: 20px;
             text-align: center;
-            border-bottom: 4px solid #004080;
+            border-bottom: 4px solid #000000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -33,17 +33,17 @@
         nav {
             position: sticky;
             top: 0;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #000000;
             padding: 10px 0;
             text-align: center;
-            border-bottom: 3px solid #003366;
+            border-bottom: 3px solid #000000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
 
         nav a {
-            color: #ffffff;
+            color: #000000;
             padding: 10px 20px;
             text-decoration: none;
             font-size: 1.2em;
@@ -55,15 +55,15 @@
         }
 
         nav a:hover {
-            background-color: #003366;
+            background-color: #000000;
             color: #ffffff;
         }
 
         section {
-            background-color: #000000;
+            background-color: #f2f2f2;
             padding: 20px;
             margin: 20px auto;
-            border: 2px solid #003366;
+            border: 2px solid #000000;
             max-width: 900px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,10 +71,10 @@
         }
 
         section h2 {
-            color: #003366;
+            color: #000000;
             font-size: 2.4em;
             margin-bottom: 15px;
-            border-bottom: 2px solid #003366;
+            border-bottom: 2px solid #000000;
             padding-bottom: 10px;
         }
 
@@ -84,10 +84,10 @@
         }
 
         .credits-list h3 {
-            color: #004080;
+            color: #000000;
             font-size: 1.8em;
             margin-top: 20px;
-            border-bottom: 1px solid #004080;
+            border-bottom: 1px solid #000000;
             padding-bottom: 10px;
         }
 
@@ -102,40 +102,40 @@
         }
 
         footer {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #f2f2f2;
+            color: #000000;
             text-align: center;
             padding: 10px;
-            border-top: 3px solid #003366;
+            border-top: 3px solid #000000;
             position: relative;
         }
 
         a {
-            color: #003366;
+            color: #000000;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         a:hover {
-            color: #004080;
+            color: #666666;
         }
 
         .discord-link {
-            display: block;
-            font-size: 1.2em;
-            margin: 20px 0;
-            padding: 15px;
-            text-align: center;
-            background-color: #003366;
-            color: #ffffff;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
-        }
+    display: block;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #007bff; /* Updated to blue */
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
 
-        .discord-link:hover {
-            background-color: #004080;
-        }
+.discord-link:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+}
 
         .icon {
             font-size: 1.5em;
@@ -144,7 +144,7 @@
         }
 
         .section-icon {
-            color: #003366;
+            color: #000000;
             margin-right: 10px;
         }
 
@@ -159,7 +159,7 @@
             display: block;
             height: 20px;
             margin-bottom: 20px;
-            border-top: 2px dashed #003366;
+            border-top: 2px dashed #000000;
         }
 
         section:first-of-type::before {
@@ -178,7 +178,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #003366;
+            background-color: #000000;
             z-index: -1;
             transition: transform 0.3s ease;
             transform: scaleX(0);
@@ -230,67 +230,12 @@
             border-radius: 10px;
         }
 
-        /* Dark Mode Styles */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: linear-gradient(to bottom, #000000, #1a1a1a);
-                color: #ffffff;
-            }
-
-            header {
-                background: linear-gradient(to bottom, #003366 0%, #004080 100%);
-                color: #ffffff;
-                border-bottom: 4px solid #004080;
-            }
-
-            nav {
-                background-color: #000000;
-                color: #ffffff;
-                border-bottom: 3px solid #003366;
-            }
-
-            section {
-                background-color: #000000;
-                border: 2px solid #003366;
-            }
-
-            section h2 {
-                color: #003366;
-                border-bottom: 2px solid #003366;
-            }
-
-            .credits-list h3 {
-                color: #004080;
-                border-bottom: 1px solid #004080;
-            }
-
-            footer {
-                background-color: #000000;
-                border-top: 3px solid #003366;
-            }
-
-            a {
-                color: #003366;
-            }
-
-            .discord-link {
-                background-color: #003366;
-            }
-
-            .discord-link:hover {
-                background-color: #004080;
-            }
-
-            .promotional-screenshots img {
-                border: 2px solid #000000;
-            }
-        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/D58t7wc-2daecafa-b5d8-42e1-ac3a-1ae08834eaf.png" alt="GTA San Andreas Stories Logo">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="GTA San Andreas Stories Logo">
 </header>
 
 <nav>
@@ -312,88 +257,39 @@
 <section id="credits">
     <h2><i class="fas fa-star section-icon"></i>Credits</h2>
     <div class="credits-list">
-        <h3>Outfits and Retextures</h3>
+        <h3></h3>
         <ul>
-            <li><strong>Endochronic</strong>: Outfit for Ryder, retexture of the interior of Sweet's house, additional ped models</li>
-            <li><strong>14todoeltiempodc</strong>: Weapon retextures</li>
-            <li><strong>Avixrune</strong>: Bonus skin</li>
+            <li><strong>Abdullah</strong>: Lead Missions Designer, Model Creation, Website Development, Creative Suggestions</li>
+            <li><strong>babamohammed2022</strong>: Project Owner, Lead Mission Designer, Storywriting, Screenshots, Model Design, Retextures, Concept Development, Supervision, Animations (credit to Yucark for the original work)</li>
+            <li><strong>Rule Breakers</strong>: Environmental Mapping, Model Creation, Promotional Screenshots</li>
+            <li><strong>FrankoU</strong>: Mapping Specialist, Screenshot Production, Supervisory Role</li>
+            <li><strong>The Small Chese</strong>: Mission Design, Storywriting, Supervision, Creative Direction</li>
+            <li><strong>Avixrune</strong>: Supervision, Creative and Design Suggestions</li>
+            <li><strong>Mike</strong>: Missions, Storywriting, Model Design, Testing, Feedback</li>
+            <li><strong>Cerdquad</strong>: Screenshots, Testing, Animations (credit to Yucark for the original)</li>
+            <li><strong>GTAMissionsCreator</strong>: Video Recording, Testing and Quality Assurance</li>
+            <li><strong>Noobshakespeare</strong>: Retexturing, Testing</li>
+            <li><strong>karammii</strong>: Billboards, Feedback</li>
         </ul>
-        <h3>Mappings</h3>
+
+        <h3>Special Contributors</h3>
         <ul>
-            <li><strong>Frankou</strong>: Mappings from Life from San Andreas (a great mod, check it out!)</li>
-            <li><strong>Rule Breakers</strong>: Additional mappings</li>
+            <li><strong>14todoeltiempodc</strong>: Weapon Retextures</li>
+            <li><strong>NorthStationX</strong>: Billboards and In-game Advertising</li>
+            <li><strong>Lost MC Claude</strong>: Bug Reporting, Testing</li>
+            <li><strong>MAHMOGAMER</strong>: Project Supervision</li>
+            <li><strong>Bolszewik</strong>: Comprehensive Testing</li>
+            <li><strong>Tix</strong>: Gameplay Testing</li>
+            <li><strong>Raul</strong>: Retextures and Visual Enhancements</li>
         </ul>
-        <h3>Special Effects</h3>
-        <ul>
-            <li><strong>Junior_djjr</strong>: Speed camera shake effect</li>
-        </ul>
-        <h3>Stores</h3>
-        <ul>
-            <li><strong>Sasquad</strong>: Pig Pen store</li>
-        </ul>
-        <h3>Animations</h3>
-        <ul>
-            <li><strong>Yucark</strong>: Original VCS animations</li>
-            <li><strong>Cerdquad</strong>, <strong>Frankou</strong>, and <strong>me</strong>: Modified VCS animations</li>
-        </ul>
-        <h3>Cars</h3>
-        <ul>
-            <li><strong>TheMademan</strong>: Admiral, Bobcat, Glendale, etc.</li>
-            <li><strong>Hirrui</strong>: Beta VCS motorbike</li>
-            <li><strong>Timjab</strong>: Beamer (Landstalker)</li>
-            <li><strong>MDXNaTioN</strong>: VCS Wintergreen</li>
-            <li><strong>Qwerty Van Hallen</strong>: VCPD car (restyled to fit GTA SAS)</li>
-            <li><strong>Threeton</strong>: Muira (Turismo), Nissan (Camper)</li>
-            <li><strong>Automan</strong>, <strong>zeb89</strong>: New Kuruma (Vincent)</li>
-        </ul>
-        <h3>Original Authors</h3>
-        <ul>
-            <li>Special thanks to the original creators of the Vice City styled cars. Your contributions are invaluable and greatly appreciated.</li>
-        </ul>
-        <h3>Outfit Models</h3>
-        <ul>
-            <li><strong>Cleoude</strong>: Model of Tenpenny, Big Smoke cop</li>
-            <li><strong>Endochronic</strong>: Some of the other models (Ryder, etc.)</li>
-            <li><strong>Rule Breakers</strong>, <strong>Mike</strong> & <strong>abdullah645</strong>: Models (Brian-outfits of Ryder and more)</li>
-        </ul>
-        <h3>Piggsy Model</h3>
-        <ul>
-            <li><strong>Skylermilligan</strong>: Piggsy model</li>
-        </ul>
-        <h3>Missions</h3>
-        <ul>
-            <li><strong>Small Cheseg</strong>, <strong>Abdullah</strong>, <strong>Mike</strong>, <strong>me</strong>, <strong>Noobshakespeare</strong></li>
-        </ul>
-        <h3>Testing</h3>
-        <ul>
-            <li><strong>Elrico</strong>, <strong>Armin Love</strong>, <strong>Cerdquad</strong>, <strong>Azitomis</strong>, <strong>Lostmcclaude</strong>, and more</li>
-        </ul>
-        <h3>Billboards</h3>
-        <ul>
-            <li><strong>Northstationx</strong>, <strong>Alexandra</strong>, <strong>me</strong></li>
-        </ul>
-        <h3>Storywriting for Chapter 3</h3>
-        <ul>
-            <li><strong>Houssem</strong></li>
-        </ul>
-        <h3>Radar Icons</h3>
-        <ul>
-            <li><strong>Cerdquad</strong> and <strong>me</strong> (original by AG_'s Classichud)</li>
-        </ul>
-        <h3>Screenshots</h3>
-        <ul>
-            <li><strong>Me</strong>, <strong>Frankou</strong>, <strong>Cerdquad</strong>, <strong>Rule Breakers</strong>, <strong>Elrico</strong></li>
-        </ul>
-        <h3>Manual</h3>
-        <ul>
-            <li><strong>Me</strong>, <strong>Frankou</strong>, <strong>Cerdquad</strong>, <strong>Bolszewik</strong>, <strong>Mike</strong></li>
-        </ul>
-        <h3>Videos</h3>
-        <ul>
-            <li><strong>GTAMissionsCreator</strong></li>
-        </ul>
+
+        <h3>Additional Credits</h3>
+        <p>This modpack integrates exceptional work from numerous talented authors within the GTA modding community. Special thanks to <strong>Endochronic</strong>,<strong>SASquad</strong>,<strong>Yucark</strong>, <strong>TheMadeMan</strong>, and many others whose mods and creativity helped bring this project to life. Full credits and detailed acknowledgments can be found within the modpack files.</p>
+        <p>We deeply appreciate their incredible work and contributions, which have enhanced the experience of GTA San Andreas Stories.</p>
     </div>
 </section>
+
+
 
 <section id="youtube">
     <h2><i class="fab fa-youtube section-icon"></i>YouTube Channel</h2>
@@ -410,10 +306,11 @@
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/c.png" alt="Screenshot 1">
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/Picsart_24-08-24_12-12-14-625.jpg" alt="Screenshot 2">
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/image.png" alt="Screenshot 3">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/captura_by_FrankoU_28_11.png" alt="Screenshot 4">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/niggacerda.png" alt="Screenshot 4">
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/likethat.jpg" alt="Screenshot" 5/>
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/ryderbigga.jpg" alt="Screenshot" 6/>
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/ryderkink.jpg" alt="Screenshot" 7/>
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/captura_by_FrankoU_28_5%20(1).png" alt="Screenshot" 7/>
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/fuckupalo.png" alt="Screenshot" 8/>
 </section>
 
 <footer>
