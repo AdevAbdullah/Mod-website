@@ -15,7 +15,7 @@
 
         body.dark-mode {
             font-family: 'Arial', sans-serif;
-            background: #333333;
+            background: #222222; /* Darker background for dark mode */
             color: #e0e0e0; /* Light gray for better readability */
             transition: all 0.3s ease-in-out;
         }
@@ -42,7 +42,7 @@
         }
 
         body.dark-mode nav {
-            background-color: #222222;
+            background-color: #111111; /* Darker background for dark mode */
             color: #e0e0e0;
         }
 
@@ -68,11 +68,11 @@
         }
 
         body.dark-mode nav a:hover {
-            background-color: #444444;
+            background-color: #333333; /* Darker hover background for dark mode */
         }
 
         section {
-            background-color: #f2f2f2;
+            background-color: #f2f2f2; /* Lighter background for light mode */
             padding: 20px;
             margin: 20px auto;
             border: 2px solid #000000;
@@ -83,8 +83,8 @@
         }
 
         body.dark-mode section {
-            background-color: #444444;
-            border-color: #666666;
+            background-color: #333333; /* Darker background for dark mode */
+            border-color: #555555; /* Lighter border for dark mode */
         }
 
         section h2 {
@@ -97,7 +97,7 @@
 
         body.dark-mode section h2 {
             color: #e0e0e0;
-            border-bottom: 2px solid #666666;
+            border-bottom: 2px solid #555555; /* Lighter border for dark mode */
         }
 
         section p {
@@ -119,7 +119,7 @@
 
         body.dark-mode .credits-list h3 {
             color: #e0e0e0;
-            border-bottom: 1px solid #666666;
+            border-bottom: 1px solid #555555; /* Lighter border for dark mode */
         }
 
         .credits-list ul {
@@ -146,9 +146,9 @@
         }
 
         body.dark-mode footer {
-            background-color: #333333;
+            background-color: #222222; /* Darker background for dark mode */
             color: #e0e0e0;
-            border-top: 3px solid #666666;
+            border-top: 3px solid #555555; /* Lighter border for dark mode */
         }
 
         a {
@@ -183,7 +183,7 @@
         }
 
         body.dark-mode .discord-link {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Darker background for dark mode */
             color: #e0e0e0;
         }
 
@@ -192,7 +192,7 @@
         }
 
         body.dark-mode .discord-link:hover {
-            background-color: #003d7a;
+            background-color: #003d7a; /* Even darker hover background for dark mode */
         }
 
         .icon {
@@ -225,7 +225,7 @@
         }
 
         body.dark-mode section::before {
-            border-top: 2px dashed #666666;
+            border-top: 2px dashed #555555; /* Lighter border for dark mode */
         }
 
         section:first-of-type::before {
@@ -252,7 +252,7 @@
         }
 
         body.dark-mode nav a::before, body.dark-mode .discord-link::before {
-            background-color: #666666;
+            background-color: #555555; /* Lighter background for dark mode */
         }
 
         nav a:hover::before, .discord-link:hover::before {
@@ -301,7 +301,7 @@
         }
 
         body.dark-mode .promotional-screenshots img {
-            border-color: #666666;
+            border-color: #555555; /* Lighter border for dark mode */
         }
 
         /* Toggle Button */
@@ -320,7 +320,7 @@
         }
 
         body.dark-mode .toggle-button {
-            background-color: #444444;
+            background-color: #444444; /* Darker background for dark mode */
         }
 
         .toggle-button:hover {
@@ -328,7 +328,7 @@
         }
 
         body.dark-mode .toggle-button:hover {
-            background-color: #666666;
+            background-color: #666666; /* Even darker hover background for dark mode */
         }
     </style>
 </head>
@@ -390,7 +390,7 @@
 </section>
 
 <section id="manual">
-    <h2><i</i>Manual</h2>
+    <h2><i class="fas fa-book section-icon"></i>Manual</h2>
     <p><strong>Coming Soon...</strong></p>
 </section>
 
@@ -431,7 +431,7 @@
             body.classList.add('dark-mode');
         } else {
             body.classList.remove('dark-mode');
-            body.classList.add('light-mode'); // LIGHTMODE NIGGA
+            body.classList.add('light-mode');
         }
     }
 </script>
