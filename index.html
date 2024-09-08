@@ -225,6 +225,62 @@
             border: 2px solid #000000;
             border-radius: 10px;
         }
+
+        /* Dark Mode Styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(to bottom, #333333, #444444);
+                color: #e0e0e0;
+            }
+
+            header {
+                background: linear-gradient(to bottom, #ffaa00 0%, #cc6600 100%);
+                color: #ffffff;
+                border-bottom: 4px solid #cc6600;
+            }
+
+            nav {
+                background-color: #000099;
+                color: #ffffff;
+                border-bottom: 3px solid #ffffff;
+            }
+
+            section {
+                background-color: #1e1e1e;
+                border: 2px solid #666666;
+            }
+
+            section h2 {
+                color: #0000ff;
+                border-bottom: 2px solid #0000ff;
+            }
+
+            .credits-list h3 {
+                color: #ff9900;
+                border-bottom: 1px solid #ff9900;
+            }
+
+            footer {
+                background-color: #000099;
+                border-top: 3px solid #ffffff;
+            }
+
+            a {
+                color: #0000ff;
+            }
+
+            .discord-link {
+                background-color: #4b6eaf;
+            }
+
+            .discord-link:hover {
+                background-color: #3b5f9a;
+            }
+
+            .promotional-screenshots img {
+                border: 2px solid #333333;
+            }
+        }
     </style>
 </head>
 <body>
