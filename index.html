@@ -6,13 +6,17 @@
     <title>GTA San Andreas Stories</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
+        body.light-mode {
             font-family: 'Arial', sans-serif;
             background: #ffffff;
             color: #000000;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            transition: all 0.3s ease-in-out;
+        }
+
+        body.dark-mode {
+            font-family: 'Arial', sans-serif;
+            background: #333333;
+            color: #e0e0e0; /* Light gray for better readability */
             transition: all 0.3s ease-in-out;
         }
 
@@ -23,11 +27,6 @@
             text-align: center;
             border-bottom: 4px solid #000000;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header img {
-            max-width: 100%;
-            height: auto;
         }
 
         nav {
@@ -42,6 +41,11 @@
             z-index: 1000;
         }
 
+        body.dark-mode nav {
+            background-color: #222222;
+            color: #e0e0e0;
+        }
+
         nav a {
             color: #000000;
             padding: 10px 20px;
@@ -54,9 +58,17 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
+        body.dark-mode nav a {
+            color: #e0e0e0;
+        }
+
         nav a:hover {
             background-color: #000000;
             color: #ffffff;
+        }
+
+        body.dark-mode nav a:hover {
+            background-color: #444444;
         }
 
         section {
@@ -70,6 +82,11 @@
             transition: all 0.3s ease-in-out;
         }
 
+        body.dark-mode section {
+            background-color: #444444;
+            border-color: #666666;
+        }
+
         section h2 {
             color: #000000;
             font-size: 2.4em;
@@ -78,9 +95,18 @@
             padding-bottom: 10px;
         }
 
+        body.dark-mode section h2 {
+            color: #e0e0e0;
+            border-bottom: 2px solid #666666;
+        }
+
         section p {
             font-size: 1.2em;
             margin-bottom: 20px;
+        }
+
+        body.dark-mode section p {
+            color: #e0e0e0;
         }
 
         .credits-list h3 {
@@ -89,6 +115,11 @@
             margin-top: 20px;
             border-bottom: 1px solid #000000;
             padding-bottom: 10px;
+        }
+
+        body.dark-mode .credits-list h3 {
+            color: #e0e0e0;
+            border-bottom: 1px solid #666666;
         }
 
         .credits-list ul {
@@ -101,6 +132,10 @@
             font-size: 1.1em;
         }
 
+        body.dark-mode .credits-list ul li {
+            color: #e0e0e0;
+        }
+
         footer {
             background-color: #f2f2f2;
             color: #000000;
@@ -110,32 +145,55 @@
             position: relative;
         }
 
+        body.dark-mode footer {
+            background-color: #333333;
+            color: #e0e0e0;
+            border-top: 3px solid #666666;
+        }
+
         a {
             color: #000000;
             text-decoration: none;
             transition: color 0.3s;
         }
 
+        body.dark-mode a {
+            color: #e0e0e0;
+        }
+
         a:hover {
             color: #666666;
         }
 
-        .discord-link {
-    display: block;
-    font-size: 1.2em;
-    margin: 20px 0;
-    padding: 15px;
-    text-align: center;
-    background-color: #007bff; /* Updated to blue */
-    color: #ffffff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-}
+        body.dark-mode a:hover {
+            color: #cccccc;
+        }
 
-.discord-link:hover {
-    background-color: #0056b3; /* Darker blue for hover */
-}
+        .discord-link {
+            display: block;
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 15px;
+            text-align: center;
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        body.dark-mode .discord-link {
+            background-color: #0056b3;
+            color: #e0e0e0;
+        }
+
+        .discord-link:hover {
+            background-color: #0056b3;
+        }
+
+        body.dark-mode .discord-link:hover {
+            background-color: #003d7a;
+        }
 
         .icon {
             font-size: 1.5em;
@@ -146,6 +204,10 @@
         .section-icon {
             color: #000000;
             margin-right: 10px;
+        }
+
+        body.dark-mode .section-icon {
+            color: #e0e0e0;
         }
 
         /* Smooth Scrolling */
@@ -160,6 +222,10 @@
             height: 20px;
             margin-bottom: 20px;
             border-top: 2px dashed #000000;
+        }
+
+        body.dark-mode section::before {
+            border-top: 2px dashed #666666;
         }
 
         section:first-of-type::before {
@@ -183,6 +249,10 @@
             transition: transform 0.3s ease;
             transform: scaleX(0);
             transform-origin: right;
+        }
+
+        body.dark-mode nav a::before, body.dark-mode .discord-link::before {
+            background-color: #666666;
         }
 
         nav a:hover::before, .discord-link:hover::before {
@@ -230,9 +300,39 @@
             border-radius: 10px;
         }
 
+        body.dark-mode .promotional-screenshots img {
+            border-color: #666666;
+        }
+
+        /* Toggle Button */
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark-mode .toggle-button {
+            background-color: #444444;
+        }
+
+        .toggle-button:hover {
+            background-color: #444444;
+        }
+
+        body.dark-mode .toggle-button:hover {
+            background-color: #666666;
+        }
     </style>
 </head>
-<body>
+<body class="light-mode">
 
 <header>
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="GTA San Andreas Stories Logo">
@@ -289,7 +389,10 @@
     </div>
 </section>
 
-
+<section id="manual">
+    <h2><i</i>Manual</h2>
+    <p><strong>Coming Soon...</strong></p>
+</section>
 
 <section id="youtube">
     <h2><i class="fab fa-youtube section-icon"></i>YouTube Channel</h2>
@@ -306,16 +409,32 @@
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/c.png" alt="Screenshot 1">
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/Picsart_24-08-24_12-12-14-625.jpg" alt="Screenshot 2">
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/image.png" alt="Screenshot 3">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/stayawaymynigga.png" alt="Screenshot 4">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/likethat.jpg" alt="Screenshot" 5/>
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/forura.png" alt="Screenshot" 6/>
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/smithjackson.png" alt="Screenshot" 7/>
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/eazye.png" alt="Screenshot" 8/>
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/argentina-transformed.png" alt="Screenshot 4">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/likethat.jpg" alt="Screenshot 5">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/niga-transformed.png" alt="Screenshot 6">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale.PNG" alt="Screenshot 7">
+    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale2.PNG" alt="Screenshot 8">
 </section>
 
 <footer>
     &copy; 2024 GTA San Andreas Stories. All rights reserved.
 </footer>
+
+<!-- Toggle Button -->
+<button class="toggle-button" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+
+<script>
+    function toggleMode() {
+        const body = document.body;
+        if (body.classList.contains('light-mode')) {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode'); // LIGHTMODE NIGGA
+        }
+    }
+</script>
 
 </body>
 </html>
