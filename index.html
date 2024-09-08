@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
-            color: #000000;
+            background: linear-gradient(to bottom, #000000, #1a1a1a);
+            color: #ffffff;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -17,11 +17,11 @@
         }
 
         header {
-            background: linear-gradient(to bottom, #ffcc00 0%, #ff9900 100%);
-            color: #000000;
+            background: linear-gradient(to bottom, #003366 0%, #004080 100%);
+            color: #ffffff;
             padding: 20px;
             text-align: center;
-            border-bottom: 4px solid #ff9900;
+            border-bottom: 4px solid #004080;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -33,11 +33,11 @@
         nav {
             position: sticky;
             top: 0;
-            background-color: #0000ff;
+            background-color: #000000;
             color: #ffffff;
             padding: 10px 0;
             text-align: center;
-            border-bottom: 3px solid #ffffff;
+            border-bottom: 3px solid #003366;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
         }
@@ -55,15 +55,15 @@
         }
 
         nav a:hover {
-            background-color: #ffcc00;
-            color: #0000ff;
+            background-color: #003366;
+            color: #ffffff;
         }
 
         section {
-            background-color: #ffffff;
+            background-color: #000000;
             padding: 20px;
             margin: 20px auto;
-            border: 2px solid #000000;
+            border: 2px solid #003366;
             max-width: 900px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -71,10 +71,10 @@
         }
 
         section h2 {
-            color: #0000ff;
+            color: #003366;
             font-size: 2.4em;
             margin-bottom: 15px;
-            border-bottom: 2px solid #0000ff;
+            border-bottom: 2px solid #003366;
             padding-bottom: 10px;
         }
 
@@ -84,10 +84,10 @@
         }
 
         .credits-list h3 {
-            color: #ff9900;
+            color: #004080;
             font-size: 1.8em;
             margin-top: 20px;
-            border-bottom: 1px solid #ff9900;
+            border-bottom: 1px solid #004080;
             padding-bottom: 10px;
         }
 
@@ -102,22 +102,22 @@
         }
 
         footer {
-            background-color: #0000ff;
+            background-color: #000000;
             color: #ffffff;
             text-align: center;
             padding: 10px;
-            border-top: 3px solid #ffffff;
+            border-top: 3px solid #003366;
             position: relative;
         }
 
         a {
-            color: #0000ff;
+            color: #003366;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         a:hover {
-            color: #ff9900;
+            color: #004080;
         }
 
         .discord-link {
@@ -126,7 +126,7 @@
             margin: 20px 0;
             padding: 15px;
             text-align: center;
-            background-color: #7289da;
+            background-color: #003366;
             color: #ffffff;
             border-radius: 5px;
             text-decoration: none;
@@ -134,7 +134,7 @@
         }
 
         .discord-link:hover {
-            background-color: #5b6eae;
+            background-color: #004080;
         }
 
         .icon {
@@ -144,7 +144,7 @@
         }
 
         .section-icon {
-            color: #0000ff;
+            color: #003366;
             margin-right: 10px;
         }
 
@@ -159,7 +159,7 @@
             display: block;
             height: 20px;
             margin-bottom: 20px;
-            border-top: 2px dashed #0000ff;
+            border-top: 2px dashed #003366;
         }
 
         section:first-of-type::before {
@@ -178,7 +178,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #ffcc00;
+            background-color: #003366;
             z-index: -1;
             transition: transform 0.3s ease;
             transform: scaleX(0);
@@ -233,56 +233,56 @@
         /* Dark Mode Styles */
         @media (prefers-color-scheme: dark) {
             body {
-                background: linear-gradient(to bottom, #333333, #444444);
-                color: #e0e0e0;
+                background: linear-gradient(to bottom, #000000, #1a1a1a);
+                color: #ffffff;
             }
 
             header {
-                background: linear-gradient(to bottom, #ffaa00 0%, #cc6600 100%);
+                background: linear-gradient(to bottom, #003366 0%, #004080 100%);
                 color: #ffffff;
-                border-bottom: 4px solid #cc6600;
+                border-bottom: 4px solid #004080;
             }
 
             nav {
-                background-color: #000099;
+                background-color: #000000;
                 color: #ffffff;
-                border-bottom: 3px solid #ffffff;
+                border-bottom: 3px solid #003366;
             }
 
             section {
-                background-color: #1e1e1e;
-                border: 2px solid #666666;
+                background-color: #000000;
+                border: 2px solid #003366;
             }
 
             section h2 {
-                color: #0000ff;
-                border-bottom: 2px solid #0000ff;
+                color: #003366;
+                border-bottom: 2px solid #003366;
             }
 
             .credits-list h3 {
-                color: #ff9900;
-                border-bottom: 1px solid #ff9900;
+                color: #004080;
+                border-bottom: 1px solid #004080;
             }
 
             footer {
-                background-color: #000099;
-                border-top: 3px solid #ffffff;
+                background-color: #000000;
+                border-top: 3px solid #003366;
             }
 
             a {
-                color: #0000ff;
+                color: #003366;
             }
 
             .discord-link {
-                background-color: #4b6eaf;
+                background-color: #003366;
             }
 
             .discord-link:hover {
-                background-color: #3b5f9a;
+                background-color: #004080;
             }
 
             .promotional-screenshots img {
-                border: 2px solid #333333;
+                border: 2px solid #000000;
             }
         }
     </style>
