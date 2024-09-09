@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GTA San Andreas Stories</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTA San Andreas Stories</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="icon" href="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-body.light-mode {
-font-family: 'Verdana', sans-serif;
-background: #ffffff;
-color: #000000;
-transition: all 0.3s ease-in-out;
+body.light-mode, body.dark-mode {
+    font-family: 'Eurostile Next', sans-serif; /* Default font for the body */
 }
 
+/* Font for headers, titles, and section titles */
+header, nav a, section h2, .credits-list h3 {
+    font-family: 'Orbitron', sans-serif; /* Font for headers and titles */
+}
+
+/* Font for paragraphs */
+section p, .credits-list ul li {
+    font-family: 'Eurostile Next', sans-serif; /* Font for paragraphs and list items */
+}
+
+/* Other styles */
+body.dark-mode header, body.dark-mode nav, body.dark-mode section, body.dark-mode .credits-list h3 {
+    font-family: 'Orbitron', sans-serif; /* Ensure dark mode also uses Orbitron for these elements */
+}
+
+body.dark-mode section p, body.dark-mode .credits-list ul li {
+    font-family: 'Eurostile Next', sans-serif; /* Ensure dark mode also uses Eurostile Next for paragraphs */
+}
+
+/* Existing CSS styles here */
+body.light-mode {
+    font-family: 'Orbitron', sans-serif;
+    background: #ffffff;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Other styles here */
+
+/* Change link color to red on hover */
+#youtube a:hover {
+    color: red;
+}
+
+#requirements p, #requirements ul, #requirements li {
+    font-family: 'Eurostile Next', sans-serif;
+}
+
+
 body.dark-mode {
-font-family: 'Verdana', sans-serif;
+font-family: 'Orbitron', sans-serif;
 background: #222222;
 color: #e0e0e0;
 transition: all 0.3s ease-in-out;
@@ -177,7 +214,7 @@ transition: all 0.3s ease-in-out;
             margin: 20px 0;
             padding: 15px;
             text-align: center;
-            background-color: #007bff;
+            background-color: #00008B;
             color: #ffffff;
             border-radius: 5px;
             text-decoration: none;
@@ -185,16 +222,16 @@ transition: all 0.3s ease-in-out;
         }
 
         body.dark-mode .discord-link {
-            background-color: #0056b3;
+            background-color: #00008B;
             color: #e0e0e0;
         }
 
         .discord-link:hover {
-            background-color: #0056b3;
+            background-color: #00008B;
         }
 
         body.dark-mode .discord-link:hover {
-            background-color: #003d7a;
+            background-color: #00008B;
         }
 
         .icon {
@@ -352,24 +389,26 @@ transition: all 0.3s ease-in-out;
 
 <section id="info">
     <h2><i class="fas fa-info-circle section-icon"></i>About the Mod</h2>
-    <p><strong>GTA San Andreas Stories</strong>, also called <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made mod by <strong>babamohammed2022</strong>. It’s still being developed and tries to bring back the feel of the GTA Stories games.</p>
+    <p><strong>GTA San Andreas Stories</strong>, also known as <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made mod by <strong>babamohammed2022</strong>. It’s still being developed and tries to bring back the feel of the GTA Stories games.</p>
     <p>This mod uses <strong>DYOM 8.1</strong> and follows Ryder’s return to Los Santos in 1987, where he starts new adventures and meets old friends again.</p>
     <p>For more details and FAQs, check out our Discord server: <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a></p>
    <p><strong>Note:</strong> If you use the <strong>Essential Modpack</strong>, remove the <strong>Widescreen mod</strong> from Modloader to avoid crashes. Moreover, <strong>SAMP</strong> is not compatible with the modpack.</p>
 </section>
 
 <section id="requirements">
-<h2><i class="fas fa-cogs section-icon"></i>Requirements</h2>
-<p>Ready to jump into Los Santos? Here’s what your PC needs:</p>
-<ul>
-<li><strong>Operating System:</strong> Windows 7 or later</li>
-<li><strong>Processor:</strong> Dual-Core or similar</li>
-<li><strong>Memory:</strong> 4 GB RAM</li>
-<li><strong>Graphics:</strong> Integrated Graphics</li>
-<li><strong>Storage:</strong> 3 GB Free Space</li>
-<li><strong>Additional Requirements:</strong> Clean copy of GTA San Andreas, GTA SA EXE 1.0 US version, CLEO and DYOM 8.1</li>
-</ul>
-<p>Ensure your system meets these requirements to enjoy a smooth gaming experience in San Andreas!</p>
+    <h2><i class="fas fa-cogs section-icon"></i>Requirements</h2>
+    <div class="requirements-list">
+        <p>Ready to jump into Los Santos? Here’s what your PC needs:</p>
+        <ul>
+            <li><strong>Operating System:</strong> Windows 7 or later</li>
+            <li><strong>Processor:</strong> Dual-Core or similar</li>
+            <li><strong>Memory:</strong> 4 GB RAM</li>
+            <li><strong>Graphics:</strong> Integrated Graphics</li>
+            <li><strong>Storage:</strong> 3 GB Free Space</li>
+            <li><strong>Additional Requirements:</strong> Clean copy of GTA San Andreas, GTA SA EXE 1.0 US version, CLEO and DYOM 8.1</li>
+        </ul>
+        <p>Ensure your system meets these requirements to enjoy a smooth gaming experience in San Andreas!</p>
+    </div>
 </section>
 
 <section id="credits">
@@ -412,9 +451,12 @@ transition: all 0.3s ease-in-out;
     <p><strong>Coming Soon...</strong></p>
 </section>
 
+</style>
+</head>
+<body class="light-mode">
 <section id="youtube">
-    <h2><i class="fab fa-youtube section-icon"></i>YouTube Channel</h2>
-    <p>Check out our <a href="https://www.youtube.com/@cerdopalo2394" target="_blank"><i class="fab fa-youtube icon"></i>YouTube channel</a> for updates, gameplay videos, and behind-the-scenes content!</p>
+<h2><i class="fab fa-youtube section-icon"></i>YouTube Channel</h2>
+<p>Check out our <a href="https://www.youtube.com/@cerdopalo2394" target="_blank"><i class="fab fa-youtube icon"></i>YouTube channel</a> for updates, gameplay videos, and behind-the-scenes content!</p>
 </section>
 
 <section id="download">
@@ -435,7 +477,7 @@ transition: all 0.3s ease-in-out;
 
 <footer>
 &copy; 2024 GTA San Andreas Stories. All rights reserved. <br>
-<strong>Disclaimer:</strong> This mod was made by fans and we are not affiliated with Rockstar Games.
+<strong>Disclaimer:</strong> This mod was made by fans who are not affiliated with Rockstar Games.
 </footer>
 
 <!-- Toggle Button -->
