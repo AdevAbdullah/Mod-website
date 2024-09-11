@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -209,32 +208,30 @@ transition: all 0.3s ease-in-out;
             color: #cccccc;
         }
 
-        .discord-link {
-            display: block;
-            font-size: 1.2em;
-            margin: 20px 0;
-            padding: 15px;
-            text-align: center;
-            background-color: #00008B;
-            color: #ffffff;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out;
-        }
+.discord-link {
+    display: block;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #00008B; /* Dark blue */
+    color: #ffffff; /* White text */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
 
-        body.dark-mode .discord-link {
-            background-color: #00008B;
-            color: #e0e0e0;
-        }
+.discord-link:hover {
+    background-color: #00008B; /* Keep the same dark blue on hover */
+}
 
-        .discord-link:hover {
-            background-color: #00008B;
-        }
+body.dark-mode .discord-link {
+    background-color: #00008B; /* Dark blue */
+}
 
-        body.dark-mode .discord-link:hover {
-            background-color: #00008B;
-        }
-
+body.dark-mode .discord-link:hover {
+    background-color: #00008B; /* Keep the same dark blue on hover */
+}
         .icon {
             font-size: 1.5em;
             margin-right: 10px;
@@ -340,24 +337,51 @@ transition: all 0.3s ease-in-out;
 
 
 
+/* Promotional Screenshots */
+#screenshots {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px auto;
+    border: 2px solid #000000;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
 
-        /* Promotional Screenshots */
-        .promotional-screenshots {
-            text-align: center;
-        }
+body.dark-mode #screenshots {
+    background-color: #333333;
+    border-color: #555555;
+}
 
-        .promotional-screenshots img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0;
-            border: 2px solid #000000;
-            border-radius: 10px;
-        }
+#screenshots h2 {
+    color: #000000;
+    font-size: 2.4em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+}
 
-        body.dark-mode .promotional-screenshots img {
-            border-color: #555555;
-        }
+body.dark-mode #screenshots h2 {
+    color: #e0e0e0;
+    border-bottom: 2px solid #555555;
+}
 
+.promotional-screenshots img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0; /* Adjust margin if needed */
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+body.dark-mode .promotional-screenshots img {
+    border-color: #555555;
+}
+
+body.dark-mode .promotional-screenshots img {
+    border-color: #555555;
+}
         /* Toggle Button */
         .toggle-button {
             position: absolute;
@@ -406,7 +430,7 @@ transition: all 0.3s ease-in-out;
     <h2><i class="fas fa-info-circle section-icon"></i>About the Mod</h2>
     <p><strong>GTA San Andreas Stories</strong>, also known as <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made mod by <strong>babamohammed2022</strong>. It’s still being developed and tries to bring back the feel of the GTA Stories games.</p>
     <p>This mod uses <strong>DYOM 8.1</strong> and follows Ryder’s return to Los Santos in 1987, where he starts new adventures and meets old friends again.</p>
-    <p>For more details and FAQs, check out our Discord server: <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a></p>
+    <p>For more details, check out our Discord server: <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a></p>
    <p><strong>Note:</strong> If you use the <strong>Essential Modpack</strong>, remove the <strong>Widescreen mod</strong> from Modloader to avoid crashes. Moreover, <strong>SAMP</strong> is not compatible with the modpack.</p>
 </section>
 
