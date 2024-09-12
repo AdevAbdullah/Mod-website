@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
 <style>
 body.light-mode, body.dark-mode {
     font-family: 'Eurostile Next', sans-serif; /* Default font for the body */
+    cursor: url('https://raw.githubusercontent.com/babamohammed2022/small-cheese/main/gtasamouse.png') 16 16, auto; /* Custom cursor */
 }
 
 /* Font for headers, titles, and section titles */
@@ -32,15 +34,11 @@ body.dark-mode section p, body.dark-mode .credits-list ul li {
     font-family: 'Eurostile Next', sans-serif; /* Ensure dark mode also uses Eurostile Next for paragraphs */
 }
 
-/* Existing CSS styles here */
 body.light-mode {
-    font-family: 'Orbitron', sans-serif;
     background: #ffffff;
     color: #000000;
     transition: all 0.3s ease-in-out;
 }
-
-/* Other styles here */
 
 /* Change link color to red on hover */
 #youtube a:hover {
@@ -51,35 +49,37 @@ body.light-mode {
     font-family: 'Eurostile Next', sans-serif;
 }
 
-
 body.dark-mode {
-font-family: 'Orbitron', sans-serif;
-background: #222222;
-color: #e0e0e0;
-transition: all 0.3s ease-in-out;
+    background: #222222;
+    color: #e0e0e0;
+    transition: all 0.3s ease-in-out;
 }
 
-        header {
-            background: #000000;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid #000000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+header {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 10px 0;
-            text-align: center;
-            border-bottom: 3px solid #000000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
+/* Ensure cursor remains the same for all interactive elements */
+a, button, .icon, .resize-cursor {
+    cursor: url('https://raw.githubusercontent.com/babamohammed2022/small-cheese/main/gtasamouse.png') 16 16, auto;
+}
         body.dark-mode nav {
             background-color: #111111;
             color: #e0e0e0;
