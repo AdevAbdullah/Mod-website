@@ -1,6 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="X-XSS-Protection" content="1; mode=block">
+  <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GTA San Andreas Stories</title>
@@ -631,4 +638,32 @@ body.dark-mode .promotional-screenshots img {
             localStorage.setItem('mode', 'light-mode');
         }
     }
+    
 </script>
+  <script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts like F12 and Ctrl+Shift+I (Inspect Element)
+        document.onkeydown = function(e) {
+            // Disable F12 (Dev Tools)
+            if (e.keyCode == 123) {
+                return false;
+            }
+            // Disable Ctrl+Shift+I (Inspect Element), Ctrl+Shift+J (Console), Ctrl+Shift+C (Inspect)
+            if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) {
+                return false;
+            }
+            // Disable Ctrl+U (View Source)
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        };
+    </script>
+</head>
+<body>
+    <!-- Body Content -->
+</body>
+</html>
