@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,42 +45,79 @@ body.light-mode {
     transition: all 0.3s ease-in-out;
 }
 
-/* Change link color to red on hover */
-#youtube a:hover {
-    color: red;
-}
+#youtube a {
+            color: inherit; /* Default link color */
+        }
 
-#requirements p, #requirements ul, #requirements li {
-    font-family: 'Eurostile Next', sans-serif;
-}
+        .easter-egg.hover-red {
+            color: red; /* Color when hovered */
+        }
 
-body.dark-mode {
-    background: #222222;
-    color: #e0e0e0;
-    transition: all 0.3s ease-in-out;
-}
+        /* General styles */
+        body.light-mode, body.dark-mode {
+            font-family: 'Eurostile Next', sans-serif; /* Default font for the body */
+        }
 
-header {
-    background: #000000;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 4px solid #000000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        /* Font for headers, titles, and section titles */
+        header, nav a, section h2, .credits-list h3 {
+            font-family: 'Orbitron', sans-serif; /* Font for headers and titles */
+        }
 
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 10px 0;
-    text-align: center;
-    border-bottom: 3px solid #000000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
+        /* Font for paragraphs */
+        section p, .credits-list ul li {
+            font-family: 'Eurostile Next', sans-serif; /* Font for paragraphs and list items */
+        }
 
+        /* Other styles */
+        body.dark-mode header, body.dark-mode nav, body.dark-mode section, body.dark-mode .credits-list h3 {
+            font-family: 'Orbitron', sans-serif; /* Ensure dark mode also uses Orbitron for these elements */
+        }
+
+        body.dark-mode section p, body.dark-mode .credits-list ul li {
+            font-family: 'Eurostile Next', sans-serif; /* Ensure dark mode also uses Eurostile Next for paragraphs */
+        }
+
+        body.light-mode {
+            background: #ffffff;
+            color: #000000;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Change link color to red on hover */
+        #youtube a:hover {
+            color: red;
+        }
+
+        #requirements p, #requirements ul, #requirements li {
+            font-family: 'Eurostile Next', sans-serif;
+        }
+
+        body.dark-mode {
+            background: #222222;
+            color: #e0e0e0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            background: #000000;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #000000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 3px solid #000000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
 
         body.dark-mode nav {
             background-color: #111111;
@@ -212,30 +247,25 @@ nav {
             color: #cccccc;
         }
 
-.discord-link {
-    display: block;
-    font-size: 1.2em;
-    margin: 20px 0;
-    padding: 15px;
-    text-align: center;
-    background-color: #00008B; /* Dark blue */
-    color: #ffffff; /* White text */
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-}
+        .discord-link {
+            display: block;
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 15px;
+            text-align: center;
+            background-color: #00008B; /* Dark blue */
+            color: #ffffff; /* White text */
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
 
-.discord-link:hover {
-    background-color: #00008B; /* Keep the same dark blue on hover */
-}
+        .discord-link:hover {
+            background-color: #000000; /* Black background on hover */
+            color: #add8e6; /* Light blue text color on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+        }
 
-body.dark-mode .discord-link {
-    background-color: #00008B; /* Dark blue */
-}
-
-body.dark-mode .discord-link:hover {
-    background-color: #00008B; /* Keep the same dark blue on hover */
-}
         .icon {
             font-size: 1.5em;
             margin-right: 10px;
@@ -243,12 +273,39 @@ body.dark-mode .discord-link:hover {
         }
 
         .section-icon {
-            color: #000000;
-            margin-right: 10px;
+            color: black; /* Default color for light mode */
         }
 
+        /* Dark mode icon styling */
         body.dark-mode .section-icon {
-            color: #e0e0e0;
+            color: white; /* Color for dark mode */
+        }
+
+        /* General link animations */
+        a {
+            transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #1e90ff; /* Change link color on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+        /* Default icon styling (light mode) */
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Default color for icons in light mode */
+        body.light-mode .section-icon {
+            color: #000000; /* Black for light mode */
+        }
+
+        /* Color for icons in dark mode */
+        body.dark-mode .section-icon {
+            color: #e0e0e0; /* Light gray for dark mode */
         }
 
         /* Smooth Scrolling */
@@ -292,11 +349,16 @@ body.dark-mode .discord-link:hover {
             transform-origin: right;
         }
 
-        body.dark-mode nav a::before, body.dark-mode .discord-link::before {
-            background-color: #555555;
+        /* Dark mode adjustments */
+        body.dark-mode nav a::before, 
+        body.dark-mode .discord-link::before {
+            background-color: #00008B; /* Dark blue background for the pseudo-elements */
         }
 
-        nav a:hover::before, .discord-link:hover::before {
+        /* Hover effects */
+        nav a:hover::before, 
+        .discord-link:hover::before {
+            background-color: #000000; /* Black background for hover effect */
             transform: scaleX(1);
             transform-origin: left;
         }
@@ -328,64 +390,59 @@ body.dark-mode .discord-link:hover {
             }
         }
 
-.google-drive-icon {
-    font-size: 2em;
-    color: #4285F4;
-    transition: transform 0.3s, color 0.3s;
-}
+        .google-drive-icon {
+            font-size: 2em;
+            color: #4285F4;
+            transition: transform 0.3s, color 0.3s;
+        }
 
-.google-drive-icon:hover {
-    color: #34a853; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
-}
+        .google-drive-icon:hover {
+            color: #34a853; /* Change color on hover */
+            transform: scale(1.1); /* Slightly enlarge the icon on hover */
+        }
 
+        /* Promotional Screenshots */
+        #screenshots {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 20px auto;
+            border: 2px solid #000000;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
 
+        body.dark-mode #screenshots {
+            background-color: #333333;
+            border-color: #555555;
+        }
 
-/* Promotional Screenshots */
-#screenshots {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin: 20px auto;
-    border: 2px solid #000000;
-    max-width: 900px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-}
+        #screenshots h2 {
+            color: #000000;
+            font-size: 2.4em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+        }
 
-body.dark-mode #screenshots {
-    background-color: #333333;
-    border-color: #555555;
-}
+        body.dark-mode #screenshots h2 {
+            color: #e0e0e0;
+            border-bottom: 2px solid #555555;
+        }
 
-#screenshots h2 {
-    color: #000000;
-    font-size: 2.4em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 10px;
-}
+        .promotional-screenshots img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0; /* Adjust margin if needed */
+            border: 2px solid #000000;
+            border-radius: 10px;
+        }
 
-body.dark-mode #screenshots h2 {
-    color: #e0e0e0;
-    border-bottom: 2px solid #555555;
-}
+        body.dark-mode .promotional-screenshots img {
+            border-color: #555555;
+        }
 
-.promotional-screenshots img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0; /* Adjust margin if needed */
-    border: 2px solid #000000;
-    border-radius: 10px;
-}
-
-body.dark-mode .promotional-screenshots img {
-    border-color: #555555;
-}
-
-body.dark-mode .promotional-screenshots img {
-    border-color: #555555;
-}
         /* Toggle Button */
         .toggle-button {
             position: absolute;
@@ -421,18 +478,24 @@ body.dark-mode .promotional-screenshots img {
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="GTA San Andreas Stories Logo">
     <nav>
         <a href="#info"><i class="fas fa-info-circle icon"></i>Info</a>
-        <a href="#faq"><i class="fas fa-question-circle icon"></i>FAQ</a> <!-- Added FAQ link -->
+        <a href="#faq"><i class="fas fa-question-circle icon"></i>FAQ</a>
         <a href="#requirements"><i class="fas fa-cogs icon"></i>Requirements</a>
         <a href="#credits"><i class="fas fa-star icon"></i>Credits</a>
         <a href="#manual"><i class="fas fa-book icon"></i>Manual</a>
-        <a href="#youtube"><i class="fab fa-youtube icon"></i>YouTube</a>
+        <a href="#youtube" class="easter-egg"><i class="fab fa-youtube icon"></i>YouTube</a>
         <a href="#download"><i class="fas fa-download icon"></i>Download</a>
         <a href="#screenshots"><i class="fas fa-image icon"></i>Screenshots</a>
+        
     </nav>
 </header>
 
+
+
+
+
 <section id="info">
     <h2><i class="fas fa-info-circle section-icon"></i>About the Mod</h2>
+
     <p><strong>GTA San Andreas Stories</strong>, also known as <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made mod by <strong>babamohammed2022</strong>. It’s still being developed and tries to bring back the feel of the GTA Stories games.</p>
     <p>This mod uses <strong>DYOM 8.1</strong> and follows Ryder’s return to Los Santos in 1987, where he starts new adventures and meets old friends again.</p>
     <p>For more details, check out our Discord server: <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a></p>
@@ -666,6 +729,20 @@ body.dark-mode .promotional-screenshots img {
     </script>
 </head>
 <body>
-    <!-- Body Content -->
+       <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const youtubeLinks = document.querySelectorAll('#youtube a');
+
+            youtubeLinks.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    link.classList.add('easter-egg');
+                });
+
+                link.addEventListener('mouseout', () => {
+                    link.classList.remove('easter-egg');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
