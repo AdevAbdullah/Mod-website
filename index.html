@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -470,6 +471,53 @@ body.light-mode {
             background-color: #002a52;
         }
 
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border: 4px solid white;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            font-size: 1.5em;
+            z-index: 100;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
     </style>
 </head>
 <body class="light-mode">
@@ -485,7 +533,8 @@ body.light-mode {
         <a href="#youtube" class="easter-egg"><i class="fab fa-youtube icon"></i>YouTube</a>
         <a href="#download"><i class="fas fa-download icon"></i>Download</a>
         <a href="#screenshots"><i class="fas fa-image icon"></i>Screenshots</a>
-        
+        <!-- New Release Date Button -->
+        <a href="#release-date"><i class="fas fa-calendar icon"></i>Release Date</a>
     </nav>
 </header>
 
@@ -577,8 +626,8 @@ body.light-mode {
             <li><strong>Abdullah</strong>: Lead Missions Designer, Model Creation, Website Development, Creative Suggestions, Writer, and Content Contributor.</li>
             <li><strong>babamohammed2022</strong>: Project Owner, Lead Mission Designer, Storywriting, Visual Design, Model Design, Retextures, Concept Development, Supervision, Visual Assistance, and Animations (with credit to Yucark for the original work).</li>
             <li><strong>FrankoU</strong>: Mapping Specialist, Screenshot Production, and Supervisory Role.</li>
+            <li><strong>Avixrune</strong>: Supervision, Creative Input, Design Suggestions, and Website Assistance.</li>
             <li><strong>The Small Chese</strong>: Mission Design, Storywriting, Supervision, and Creative Direction.</li>
-            <li><strong>Avixrune</strong>: Supervision, Creative and Design Suggestions.</li>
             <li><strong>Mike</strong>: Missions, Storywriting, Model Design, Testing, Feedback, and In-game Photography.</li>
             <li><strong>Cerdquad</strong>: Screenshots, Testing, and Animations (with credit to Yucark for the original work).</li>
             <li><strong>GTAMissionsCreator</strong>: Video Recording, Testing, and Quality Assurance.</li>
@@ -606,7 +655,36 @@ body.light-mode {
 
 <section id="manual">
     <h2><i class="fas fa-book section-icon"></i>Manual</h2>
-    <p><strong>Coming Soon...</strong></p>
+    <div class="slider-container" id="slider-container">
+        <div class="slider" id="slider">
+            <img src="https://imagizer.imageshack.com/v2/xq70/924/Lwvsta.jpg" alt="Slide 1">
+            <img src="https://imagizer.imageshack.com/v2/xq70/922/wp4AJP.jpg" alt="Slide 2">
+            <img src="https://imagizer.imageshack.com/v2/xq70/923/kplH5M.jpg" alt="Slide 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll("#slider img");
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+            document.getElementById("slider").style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+
+        function moveSlide(step) {
+            showSlide(slideIndex + step);
+        }
+
+        showSlide(slideIndex);
+    </script>
 </section>
 
 </style>
@@ -633,11 +711,23 @@ body.light-mode {
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale2.PNG" alt="Screenshot 7">
 </section>
 
-<footer>
-&copy; 2024 GTA San Andreas Stories. All rights reserved. <br>
-<strong>Disclaimer:</strong> This mod was made by fans who are not affiliated with Rockstar Games.
-</footer>
 
+<section id="release-date">
+    <h2><i class="fas fa-calendar section-icon"></i>Release Date</h2>
+    <div class="release-info">
+        <p>We're excited to announce that the alpha version of the mod is expected to become public in:</p>
+        <div class="release-date-info">
+            <p><strong>Expected Release Month:</strong></strong> October 2024</p>
+        </div>
+        <p>Stay tuned for more updates and exact release details as we approach the release month!</p>
+    </div>
+</section>
+
+
+<footer style="font-family: 'Orbitron', sans-serif;">
+    &copy; 2024 GTA San Andreas Stories. All rights reserved. <br>
+    <strong>Disclaimer:</strong> This mod was made by fans who are not affiliated with Rockstar Games.
+</footer>
 <!-- Toggle Button -->
 <button class="toggle-button" onclick="toggleMode()" id="toggle-button">Toggle Dark/Light Mode</button>
 
