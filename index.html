@@ -854,24 +854,31 @@ body.light-mode {
 
 
        
-    <script>
-        // Rate Limiting (Basic Client-Side)
-        let requestCount = 0;
-        const limit = 100; // Example limit: 100 requests in 10 minutes
-        const timeFrame = 10 * 60 * 1000; // 10 minutes
+    <!-- Your other HTML content -->
 
-        setInterval(function() {
-            requestCount = 0; // Reset the request count every 10 minutes
-        }, timeFrame);
+<!-- Your other HTML content -->
 
-        document.addEventListener('click', function() {
-            requestCount++;
-            if (requestCount > limit) {
-                alert('Too many requests. Please try again later.');
-            }
-        });
-    </script>
-</body>
-</html>
+<!-- 100% privacy-first analytics -->
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+<script>
+    // Rate Limiting (Basic Client-Side)
+    let requestCount = 0;
+    const limit = 100; // Example limit: 100 requests in 10 minutes
+    const timeFrame = 10 * 60 * 1000; // 10 minutes
+
+    setInterval(function() {
+        requestCount = 0; // Reset the request count every 10 minutes
+    }, timeFrame);
+
+    document.addEventListener('click', function() {
+        requestCount++;
+        if (requestCount > limit) {
+            alert('Too many requests. Please try again later.');
+        }
+    });
+</script>
+
 </body>
 </html>
