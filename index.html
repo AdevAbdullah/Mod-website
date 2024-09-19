@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
@@ -11,10 +10,10 @@
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
     <meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(), camera=()">
-<title>GTA San Andreas Stories</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="icon" href="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="hello">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>GTA San Andreas Stories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="hello">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 body.light-mode, body.dark-mode {
@@ -805,5 +804,74 @@ body.light-mode {
             });
         });
     </script>
+     <script>
+        function BotDetector(args) {
+            var self = this;
+            self.isBot = false;
+            self.tests = {};
+
+            var selectedTests = args.tests || [];
+            if (selectedTests.length == 0 || selectedTests.indexOf(BotDetector.Tests.SCROLL) != -1) {
+                self.tests[BotDetector.Tests.SCROLL] = function() {
+                    var e = function() {
+                        self.tests[BotDetector.Tests.SCROLL] = true;
+                        self.update()
+                        self.unbindEvent(window, BotDetector.Tests.SCROLL, e)
+                    };
+                    self.bindEvent(window, BotDetector.Tests.SCROLL, e);
+                };
+            }
+
+            // Additional tests for mouse, key, and other actions
+            // ... (truncated for brevity)
+
+            self.update = function(notify) {
+                var count = 0;
+                var tests = 0;
+                for (var i in self.tests) {
+                    if (self.tests.hasOwnProperty(i)) {
+                        count++;
+                    }
+                    tests++;
+                }
+                self.isBot = count == 0;
+                if (self.isBot) {
+                    // Send to server for blocking if a bot is detected
+                    fetch('/block-ip', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ botDetected: true })
+                    });
+                }
+            };
+        }
+
+        var botDetector = new BotDetector({});
+        botDetector.update();
+    </script>
+
+
+       
+    <script>
+        // Rate Limiting (Basic Client-Side)
+        let requestCount = 0;
+        const limit = 100; // Example limit: 100 requests in 10 minutes
+        const timeFrame = 10 * 60 * 1000; // 10 minutes
+
+        setInterval(function() {
+            requestCount = 0; // Reset the request count every 10 minutes
+        }, timeFrame);
+
+        document.addEventListener('click', function() {
+            requestCount++;
+            if (requestCount > limit) {
+                alert('Too many requests. Please try again later.');
+            }
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
