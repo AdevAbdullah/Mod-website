@@ -1,559 +1,582 @@
 
 
+
 <!DOCTYPE html>
 
 <html lang="en">
 
 
 <head>
-    
+
 <meta charset="UTF-8">
-    
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    
+
 <meta http-equiv="X-Frame-Options" content="DENY">
-    
+
 <meta name="X-XSS-Protection" content="1; mode=block">
-    
+
 <meta name="robots" content="noindex, nofollow">
-    
+
 <meta name="referrer" content="no-referrer">
-    
+
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    
+
 <meta http-equiv="Permissions-Policy" content="geolocation=(self), microphone=(), camera=()">
-    
+
 <title>GTA San Andreas Stories
 </title>
-    
+
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
 
 <link rel="icon" href="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="hello">
-    
+
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 
 <style>
 body.light-mode, body.dark-mode {
-    font-family: 'Eurostile Next', sans-serif; /* Default font for the body */
+        font-family: 'Eurostile Next', sans-serif; /* Default font for the body */
 }
 
 /* Font for headers, titles, and section titles */
 header, nav a, section h2, .credits-list h3 {
-    font-family: 'Orbitron', sans-serif; /* Font for headers and titles */
+        font-family: 'Orbitron', sans-serif; /* Font for headers and titles */
 }
 
 /* Font for paragraphs */
 section p, .credits-list ul li {
-    font-family: 'Eurostile Next', sans-serif; /* Font for paragraphs and list items */
+        font-family: 'Eurostile Next', sans-serif; /* Font for paragraphs and list items */
 }
 
 /* Other styles */
 body.dark-mode header, body.dark-mode nav, body.dark-mode section, body.dark-mode .credits-list h3 {
-    font-family: 'Orbitron', sans-serif; /* Ensure dark mode also uses Orbitron for these elements */
+        font-family: 'Orbitron', sans-serif; /* Ensure dark mode also uses Orbitron for these elements */
 }
 
 body.dark-mode section p, body.dark-mode .credits-list ul li {
-    font-family: 'Eurostile Next', sans-serif; /* Ensure dark mode also uses Eurostile Next for paragraphs */
+        font-family: 'Eurostile Next', sans-serif; /* Ensure dark mode also uses Eurostile Next for paragraphs */
 }
 
 body.light-mode {
-    background: #ffffff;
-    color: #000000;
-    transition: all 0.3s ease-in-out;
+        background: #ffffff;
+        color: #000000;
+        transition: all 0.3s ease-in-out;
 }
 
 #youtube a {
-            color: inherit; /* Default link color */
-        }
+                        color: inherit; /* Default link color */
+                }
 
-        .easter-egg.hover-red {
-            color: red; /* Color when hovered */
-        }
+                .easter-egg.hover-red {
+                        color: red; /* Color when hovered */
+                }
 
-        /* General styles */
-        body.light-mode, body.dark-mode {
-            font-family: 'Eurostile Next', sans-serif; /* Default font for the body */
-        }
+                /* General styles */
+                body.light-mode, body.dark-mode {
+                        font-family: 'Eurostile Next', sans-serif; /* Default font for the body */
+                }
 
-        /* Font for headers, titles, and section titles */
-        header, nav a, section h2, .credits-list h3 {
-            font-family: 'Orbitron', sans-serif; /* Font for headers and titles */
-        }
+                /* Font for headers, titles, and section titles */
+                header, nav a, section h2, .credits-list h3 {
+                        font-family: 'Orbitron', sans-serif; /* Font for headers and titles */
+                }
 
-        /* Font for paragraphs */
-        section p, .credits-list ul li {
-            font-family: 'Eurostile Next', sans-serif; /* Font for paragraphs and list items */
-        }
+                /* Font for paragraphs */
+                section p, .credits-list ul li {
+                        font-family: 'Eurostile Next', sans-serif; /* Font for paragraphs and list items */
+                }
 
-        /* Other styles */
-        body.dark-mode header, body.dark-mode nav, body.dark-mode section, body.dark-mode .credits-list h3 {
-            font-family: 'Orbitron', sans-serif; /* Ensure dark mode also uses Orbitron for these elements */
-        }
+                /* Other styles */
+                body.dark-mode header, body.dark-mode nav, body.dark-mode section, body.dark-mode .credits-list h3 {
+                        font-family: 'Orbitron', sans-serif; /* Ensure dark mode also uses Orbitron for these elements */
+                }
 
-        body.dark-mode section p, body.dark-mode .credits-list ul li {
-            font-family: 'Eurostile Next', sans-serif; /* Ensure dark mode also uses Eurostile Next for paragraphs */
-        }
+                body.dark-mode section p, body.dark-mode .credits-list ul li {
+                        font-family: 'Eurostile Next', sans-serif; /* Ensure dark mode also uses Eurostile Next for paragraphs */
+                }
 
-        body.light-mode {
-            background: #ffffff;
-            color: #000000;
-            transition: all 0.3s ease-in-out;
-        }
+                body.light-mode {
+                        background: #ffffff;
+                        color: #000000;
+                        transition: all 0.3s ease-in-out;
+                }
 
-        /* Change link color to red on hover */
-        #youtube a:hover {
-            color: red;
-        }
+                /* Change link color to red on hover */
+                #youtube a:hover {
+                        color: red;
+                }
 
-        #requirements p, #requirements ul, #requirements li {
-            font-family: 'Eurostile Next', sans-serif;
-        }
+                #requirements p, #requirements ul, #requirements li {
+                        font-family: 'Eurostile Next', sans-serif;
+                }
 
-        body.dark-mode {
-            background: #222222;
-            color: #e0e0e0;
-            transition: all 0.3s ease-in-out;
-        }
+                body.dark-mode {
+                        background: #222222;
+                        color: #e0e0e0;
+                        transition: all 0.3s ease-in-out;
+                }
 
-        header {
-            background: #000000;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid #000000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+                header {
+                        background: #000000;
+                        color: #ffffff;
+                        padding: 20px;
+                        text-align: center;
+                        border-bottom: 4px solid #000000;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
 
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 10px 0;
-            text-align: center;
-            border-bottom: 3px solid #000000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+                nav {
+                        position: sticky;
+                        top: 0;
+                        background-color: #ffffff;
+                        color: #000000;
+                        padding: 10px 0;
+                        text-align: center;
+                        border-bottom: 3px solid #000000;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        z-index: 1000;
+                }
 
-        body.dark-mode nav {
-            background-color: #111111;
-            color: #e0e0e0;
-        }
+                body.dark-mode nav {
+                        background-color: #111111;
+                        color: #e0e0e0;
+                }
 
-        nav a {
-            color: #000000;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 4px;
-            margin: 0 10px;
-            display: inline-block;
-            transition: background-color 0.3s, color 0.3s;
-        }
+                nav a {
+                        color: #000000;
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        border-radius: 4px;
+                        margin: 0 10px;
+                        display: inline-block;
+                        transition: background-color 0.3s, color 0.3s;
+                }
 
-        body.dark-mode nav a {
-            color: #e0e0e0;
-        }
+                body.dark-mode nav a {
+                        color: #e0e0e0;
+                }
 
-        nav a:hover {
-            background-color: #000000;
-            color: #ffffff;
-        }
+                nav a:hover {
+                        background-color: #000000;
+                        color: #ffffff;
+                }
 
-        body.dark-mode nav a:hover {
-            background-color: #333333;
-        }
+                body.dark-mode nav a:hover {
+                        background-color: #333333;
+                }
 
-        section {
-            background-color: #f2f2f2;
-            padding: 20px;
-            margin: 20px auto;
-            border: 2px solid #000000;
-            max-width: 900px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
-        }
+                section {
+                        background-color: #f2f2f2;
+                        padding: 20px;
+                        margin: 20px auto;
+                        border: 2px solid #000000;
+                        max-width: 900px;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        transition: all 0.3s ease-in-out;
+                }
 
-        body.dark-mode section {
-            background-color: #333333;
-            border-color: #555555;
-        }
+                body.dark-mode section {
+                        background-color: #333333;
+                        border-color: #555555;
+                }
 
-        section h2 {
-            color: #000000;
-            font-size: 2.4em;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 10px;
-        }
+                section h2 {
+                        color: #000000;
+                        font-size: 2.4em;
+                        margin-bottom: 15px;
+                        border-bottom: 2px solid #000000;
+                        padding-bottom: 10px;
+                }
 
-        body.dark-mode section h2 {
-            color: #e0e0e0;
-            border-bottom: 2px solid #555555;
-        }
+                body.dark-mode section h2 {
+                        color: #e0e0e0;
+                        border-bottom: 2px solid #555555;
+                }
 
-        section p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
+                section p {
+                        font-size: 1.2em;
+                        margin-bottom: 20px;
+                }
 
-        body.dark-mode section p {
-            color: #e0e0e0;
-        }
+                body.dark-mode section p {
+                        color: #e0e0e0;
+                }
 
-        .credits-list h3 {
-            color: #000000;
-            font-size: 1.8em;
-            margin-top: 20px;
-            border-bottom: 1px solid #000000;
-            padding-bottom: 10px;
-        }
+                .credits-list h3 {
+                        color: #000000;
+                        font-size: 1.8em;
+                        margin-top: 20px;
+                        border-bottom: 1px solid #000000;
+                        padding-bottom: 10px;
+                }
 
-        body.dark-mode .credits-list h3 {
-            color: #e0e0e0;
-            border-bottom: 1px solid #555555;
-        }
+                body.dark-mode .credits-list h3 {
+                        color: #e0e0e0;
+                        border-bottom: 1px solid #555555;
+                }
 
-        .credits-list ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
+                .credits-list ul {
+                        list-style-type: square;
+                        padding-left: 20px;
+                }
 
-        .credits-list ul li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
+                .credits-list ul li {
+                        margin-bottom: 10px;
+                        font-size: 1.1em;
+                }
 
-        body.dark-mode .credits-list ul li {
-            color: #e0e0e0;
-        }
+                body.dark-mode .credits-list ul li {
+                        color: #e0e0e0;
+                }
 
-        footer {
-            background-color: #f2f2f2;
-            color: #000000;
-            text-align: center;
-            padding: 10px;
-            border-top: 3px solid #000000;
-            position: relative;
-        }
+                footer {
+                        background-color: #f2f2f2;
+                        color: #000000;
+                        text-align: center;
+                        padding: 10px;
+                        border-top: 3px solid #000000;
+                        position: relative;
+                }
 
-        body.dark-mode footer {
-            background-color: #222222;
-            color: #e0e0e0;
-            border-top: 3px solid #555555;
-        }
+                body.dark-mode footer {
+                        background-color: #222222;
+                        color: #e0e0e0;
+                        border-top: 3px solid #555555;
+                }
 
-        a {
-            color: #000000;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+                a {
+                        color: #000000;
+                        text-decoration: none;
+                        transition: color 0.3s;
+                }
 
-        body.dark-mode a {
-            color: #e0e0e0;
-        }
+                body.dark-mode a {
+                        color: #e0e0e0;
+                }
 
-        a:hover {
-            color: #666666;
-        }
+                a:hover {
+                        color: #666666;
+                }
 
-        body.dark-mode a:hover {
-            color: #cccccc;
-        }
+                body.dark-mode a:hover {
+                        color: #cccccc;
+                }
 
-        .discord-link {
-            display: block;
-            font-size: 1.2em;
-            margin: 20px 0;
-            padding: 15px;
-            text-align: center;
-            background-color: #00008B; /* Dark blue */
-            color: #ffffff; /* White text */
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-
-        .discord-link:hover {
-            background-color: #000000; /* Black background on hover */
-            color: #add8e6; /* Light blue text color on hover */
-            transform: scale(1.05); /* Slightly enlarge the button */
-        }
-
-        .icon {
-            font-size: 1.5em;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        .section-icon {
-            color: black; /* Default color for light mode */
-        }
-
-        /* Dark mode icon styling */
-        body.dark-mode .section-icon {
-            color: white; /* Color for dark mode */
-        }
-
-        /* General link animations */
-        a {
-            transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
-        }
-
-        a:hover {
-            color: #1e90ff; /* Change link color on hover */
-            text-decoration: underline; /* Add underline on hover */
-        }
-
-        /* Default icon styling (light mode) */
-        .icon {
-            font-size: 1.5em;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        /* Default color for icons in light mode */
-        body.light-mode .section-icon {
-            color: #000000; /* Black for light mode */
-        }
-
-        /* Color for icons in dark mode */
-        body.dark-mode .section-icon {
-            color: #e0e0e0; /* Light gray for dark mode */
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Section Dividers */
-        section::before {
-            content: "";
-            display: block;
-            height: 20px;
-            margin-bottom: 20px;
-            border-top: 2px dashed #000000;
-        }
-
-        body.dark-mode section::before {
-            border-top: 2px dashed #555555;
-        }
-
-        section:first-of-type::before {
-            display: none;
-        }
-
-        /* Button Hover Animation */
-        nav a, .discord-link {
-            position: relative;
-        }
-
-        nav a::before, .discord-link::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000000;
-            z-index: -1;
-            transition: transform 0.3s ease;
-            transform: scaleX(0);
-            transform-origin: right;
-        }
-
-        /* Dark mode adjustments */
-        body.dark-mode nav a::before, 
-        body.dark-mode .discord-link::before {
-            background-color: #00008B; /* Dark blue background for the pseudo-elements */
-        }
-
-        /* Hover effects */
-        nav a:hover::before, 
-        .discord-link:hover::before {
-            background-color: #000000; /* Black background for hover effect */
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header img {
-                max-width: 80%;
-            }
-
-            nav a {
-                font-size: 1em;
-                padding: 8px 15px;
-                margin: 0 5px;
-            }
-
-            section {
-                padding: 15px;
-                margin: 10px auto;
-            }
-
-            section h2 {
-                font-size: 2em;
-            }
-
-            .discord-link {
-                font-size: 1em;
-                padding: 10px;
-            }
-        }
-
-        .google-drive-icon {
-            font-size: 2em;
-            color: #4285F4;
-            transition: transform 0.3s, color 0.3s;
-        }
-
-        .google-drive-icon:hover {
-            color: #34a853; /* Change color on hover */
-            transform: scale(1.1); /* Slightly enlarge the icon on hover */
-        }
-
-        /* Promotional Screenshots */
-        #screenshots {
-            background-color: #f2f2f2;
-            padding: 20px;
-            margin: 20px auto;
-            border: 2px solid #000000;
-            max-width: 900px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
-        }
-        /* Updates section styling for dark mode */
-body.dark-mode #updates {
-    background-color: #000000; /* Black background */
+                .discord-link {
+    display: block;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #00008B; /* Dark blue */
     color: #ffffff; /* White text */
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
+    overflow: hidden; /* Hide the overflowing pseudo-element */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-        body.dark-mode #screenshots {
-            background-color: #333333;
-            border-color: #555555;
-        }
 
-        #screenshots h2 {
-            color: #000000;
-            font-size: 2.4em;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 10px;
-        }
+.discord-link:hover {
+    background-color: #00008B; /* Keep it dark blue on hover */
+    color: #add8e6; /* Light blue text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
 
-        body.dark-mode #screenshots h2 {
-            color: #e0e0e0;
-            border-bottom: 2px solid #555555;
-        }
+.discord-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00008B; /* Dark blue background */
+    z-index: -1;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+}
 
-        .promotional-screenshots img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0; /* Adjust margin if needed */
-            border: 2px solid #000000;
-            border-radius: 10px;
-        }
+.discord-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
-        body.dark-mode .promotional-screenshots img {
-            border-color: #555555;
-        }
+.icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 
-        /* Toggle Button */
-        .toggle-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #0056b3;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
+                .section-icon {
+                        color: black; /* Default color for light mode */
+                }
 
-        .toggle-button:hover {
-            background-color: #003d7a;
-        }
+                /* Dark mode icon styling */
+                body.dark-mode .section-icon {
+                        color: white; /* Color for dark mode */
+                }
 
-        body.dark-mode .toggle-button {
-            background-color: #004080;
-        }
+                /* General link animations */
+                a {
+                        transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+                }
 
-        body.dark-mode .toggle-button:hover {
-            background-color: #002a52;
-        }
+                a:hover {
+                        color: #FFFFFF; /* Change link color on hover */
+                        text-decoration: underline; /* Add underline on hover */
+                }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-        }
+                /* Default icon styling (light mode) */
+                .icon {
+                        font-size: 1.5em;
+                        margin-right: 10px;
+                        vertical-align: middle;
+                }
 
-        .slider-container {
-            position: relative;
-            width: 600px;
-            height: 300px;
-            margin: 50px auto;
-            overflow: hidden;
-            background-color: #f9f9f9;
-            border: 4px solid white;
-        }
+                /* Default color for icons in light mode */
+                body.light-mode .section-icon {
+                        color: #000000; /* Black for light mode */
+                }
 
-        .slider {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
+                /* Color for icons in dark mode */
+                body.dark-mode .section-icon {
+                        color: #e0e0e0; /* Light gray for dark mode */
+                }
 
-        .slider img {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
+                /* Smooth Scrolling */
+                html {
+                        scroll-behavior: smooth;
+                }
 
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-            border: none;
-            font-size: 1.5em;
-            z-index: 100;
-        }
+                /* Section Dividers */
+                section::before {
+                        content: "";
+                        display: block;
+                        height: 20px;
+                        margin-bottom: 20px;
+                        border-top: 2px dashed #000000;
+                }
 
-        .prev {
-            left: 10px;
-        }
+                body.dark-mode section::before {
+                        border-top: 2px dashed #555555;
+                }
 
-        .next {
-            right: 10px;
-        }
-    
+                section:first-of-type::before {
+                        display: none;
+                }
+
+                /* Button Hover Animation */
+                nav a, .discord-link {
+                        position: relative;
+                }
+
+                nav a::before, .discord-link::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #00008B;
+                        z-index: -1;
+                        transition: transform 0.3s ease;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                }
+
+                /* Dark mode adjustments */
+                body.dark-mode nav a::before,
+                body.dark-mode .discord-link::before {
+                        background-color: #00008B; /* Dark blue background for the pseudo-elements */
+                }
+
+                /* Hover effects */
+                nav a:hover::before,
+                .discord-link:hover::before {
+                        background-color: #00008B; /* Black background for hover effect */
+                        transform: scaleX(1);
+                        transform-origin: left;
+                }
+
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                        header img {
+                                max-width: 80%;
+                        }
+
+                        nav a {
+                                font-size: 1em;
+                                padding: 8px 15px;
+                                margin: 0 5px;
+                        }
+
+                        section {
+                                padding: 15px;
+                                margin: 10px auto;
+                        }
+
+                        section h2 {
+                                font-size: 2em;
+                        }
+
+                        .discord-link {
+                                font-size: 1em;
+                                padding: 10px;
+                        }
+                }
+
+                .google-drive-icon {
+                        font-size: 2em;
+                        color: #4285F4;
+                        transition: transform 0.3s, color 0.3s;
+                }
+
+                .google-drive-icon:hover {
+                        color: #34a853; /* Change color on hover */
+                        transform: scale(1.1); /* Slightly enlarge the icon on hover */
+                }
+
+                /* Promotional Screenshots */
+                #screenshots {
+                        background-color: #f2f2f2;
+                        padding: 20px;
+                        margin: 20px auto;
+                        border: 2px solid #000000;
+                        max-width: 900px;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        transition: all 0.3s ease-in-out;
+                }
+/* Updates section styling for dark mode */
+body.dark-mode #updates {
+        background-color: #333333; /* Gray background */
+        border-color: #555555; /* Border color */
+        border-style: solid; /* Adding border style */
+        border-width: 1px; /* Adjust the width as needed */
+        color: #ffffff; /* White text */
+}
+
+
+                body.dark-mode #screenshots {
+                        background-color: #333333;
+                        border-color: #555555;
+                }
+
+                #screenshots h2 {
+                        color: #000000;
+                        font-size: 2.4em;
+                        margin-bottom: 15px;
+                        border-bottom: 2px solid #000000;
+                        padding-bottom: 10px;
+                }
+
+                body.dark-mode #screenshots h2 {
+                        color: #e0e0e0;
+                        border-bottom: 2px solid #555555;
+                }
+
+                .promotional-screenshots img {
+                        max-width: 100%;
+                        height: auto;
+                        margin: 10px 0; /* Adjust margin if needed */
+                        border: 2px solid #000000;
+                        border-radius: 10px;
+                }
+
+                body.dark-mode .promotional-screenshots img {
+                        border-color: #555555;
+                }
+
+                /* Toggle Button */
+                .toggle-button {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        padding: 10px 20px;
+                        background-color: #0056b3;
+                        color: #ffffff;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 1em;
+                        transition: background-color 0.3s ease;
+                }
+
+.toggle-button:hover {
+background-color: #000000; /* Black background on hover */
+}
+
+body.dark-mode.toggle-button {
+background-color: #000000; /* Black background in dark mode */
+}
+
+body.dark-mode.toggle-button:hover {
+background-color: #000000; /* Black background on hover in dark mode */
+}
+                body {
+                        margin: 0;
+                        font-family: Arial, sans-serif;
+                        background-color: #000;
+                }
+
+                .slider-container {
+                        position: relative;
+                        width: 600px;
+                        height: 300px;
+                        margin: 50px auto;
+                        overflow: hidden;
+                        background-color: #f9f9f9;
+                        border: 4px solid white;
+                }
+
+                .slider {
+                        display: flex;
+                        transition: transform 1s ease-in-out;
+                }
+
+                .slider img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                }
+
+                .prev, .next {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: white;
+                        padding: 10px;
+                        cursor: pointer;
+                        border: none;
+                        font-size: 1.5em;
+                        z-index: 100;
+                }
+
+                .prev {
+                        left: 10px;
+                }
+
+                .next {
+                        right: 10px;
+                }
+
 </style>
 
 </head>
 
 
 <body class="light-mode">
-
-
-
 
 <header>
     <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="GTA San Andreas Stories Logo">
@@ -571,7 +594,6 @@ body.dark-mode #updates {
     </nav>
 </header>
 
-
 <style>
     nav a {
         color: #000; /* Default color for links */
@@ -585,226 +607,210 @@ body.dark-mode #updates {
     nav a.updates-link:hover {
         color: #0078D4; /* Blue color on hover for Updates link */
     }
-
 </style>
-
-
-<style>
-    nav a {
-        color: #000; /* Default color for links */
-        text-decoration: none; /* Remove underline */
-    }
-
-    /* Change color only for the YouTube link on hover */
-    nav a.easter-egg:hover {
-        color: #FF0000; /* YouTube Red on hover */
-    }
-
-</style>
-
 
 
 
 <section id="info">
-    <h2><i class="fas fa-info-circle section-icon"></i>About the Mod</h2>
+        <h2><i class="fas fa-info-circle section-icon"></i>About the Mod</h2>
 
-    
+
 
 <p><strong>GTA San Andreas Stories</strong>, also known as <strong>GTA San Andreas Stories: The Return of Ryder</strong> or <strong>GTA San Andreas Stories: 1987</strong>, is a fan-made mod by <strong>babamohammed2022</strong>. It’s still being developed and tries to bring back the feel of the GTA Stories games.</p>
-    
+
 
 <p>This mod uses <strong>DYOM 8.1</strong> and follows Ryder’s return to Los Santos in 1987, where he starts new adventures and meets old friends again.</p>
-    
+
 
 <p>For more details, check out our Discord server: <a href="https://discord.gg/Wcm7sPMv" target="_blank" class="discord-link"><i class="fab fa-discord icon"></i>Discord Server</a></p>
-    
+
 
 <p><strong>Note:</strong> If you use the <strong>Essential Modpack</strong>, remove the <strong>Widescreen mod</strong> from Modloader to avoid crashes. Moreover, <strong>SAMP</strong> is not compatible with the modpack.</p>
 </section>
 
 <section id="faq">
-    <h2><i class="fas fa-question-circle section-icon"></i> Frequently Asked Questions (FAQ)</h2>
-    
+        <h2><i class="fas fa-question-circle section-icon"></i> Frequently Asked Questions (FAQ)</h2>
+
 
 <div class="faq-list">
-        <h3>Q1: What is the setting of the mod?</h3>
-        
+                <h3>Q1: What is the setting of the mod?</h3>
+
 
 <p>The mod is set in 1987 in the fictional city of Los Santos, a sprawling metropolis on the brink of chaos. Gangs, including the iconic Grove Street Families, battle for control and survival amidst rising threats.</p>
 
-        <h3>Q2: Who is the main protagonist in the storyline?</h3>
-        
+                <h3>Q2: Who is the main protagonist in the storyline?</h3>
+
 
 <p>The main protagonist is Lance "Ryder" Wilson, a loyal member of the Grove Street Families. After a period in Vice City, Ryder returns to Los Santos to strengthen the gang in the absence of his childhood friend CJ.</p>
 
-        <h3>Q3: Why did CJ leave Los Santos?</h3>
-        
+                <h3>Q3: Why did CJ leave Los Santos?</h3>
+
 
 <p>CJ, also known as Carl Johnson, left Los Santos due to the death of his brother, Brian Johnson. The loss of his brother led CJ to depart for Liberty City, leaving the responsibility of leading the Grove Street Families to his brother Sweet and others.</p>
 
-        <h3>Q4: Are there multiple chapters in the storyline?</h3>
-        
+                <h3>Q4: Are there multiple chapters in the storyline?</h3>
+
 
 <p>Yes, the storyline is divided into 3 chapters, filled with dynamic gang encounters across Los Santos.</p>
 
-        <h3>Q5: Are there any side missions?</h3>
-        
+                <h3>Q5: Are there any side missions?</h3>
+
 
 <p>Yes, three side missions have been added so far:</p>
-        
+
 <ul>
-            
+
 <li>Pizza Delivery (similar to GTA VC/GTA LCS)</li>
-            
+
 <li>Trash Dash (similar to GTA LCS)</li>
-            
+
 <li>Drug Bust Operation (WIP)</li>
-        
+
 </ul>
 
-        <h3>Q6: Can you change outfits?</h3>
-        
+                <h3>Q6: Can you change outfits?</h3>
+
 
 <p>Yes, there are 11 outfit options (+ a bonus outfit), and you can find clothing pickups around the map, similar to GTA Vice City.</p>
 
-        <h3>Q7: What kind of weapons and vehicles are available?</h3>
-        
+                <h3>Q7: What kind of weapons and vehicles are available?</h3>
+
 
 <p>The mod features weapons from multiple Rockstar Games titles, such as Manhunt, GTA Vice City Stories, and GTA Liberty City Stories, along with new weapon pickups scattered across the map. You’ll also see vehicles from Vice City and Vice City Stories along with a few new ones.</p>
 
-        <h3>Q8: Does the game have new characters?</h3>
-        
+                <h3>Q8: Does the game have new characters?</h3>
+
 
 <p>Yes, iconic characters like Tommy Vercetti, Ken Rosenberg, and 8-Ball make appearances in the mod to make it more interesting.</p>
 
-        <h3>Q9: Are there any new features or mechanics introduced in the mod?</h3>
-        
+                <h3>Q9: Are there any new features or mechanics introduced in the mod?</h3>
+
 
 <p>The mod introduces new cheat codes, along with the original GTA SA cheats. There are also '80s atmosphere updates with billboards, timecyc, and more, plus a Stories-style HUD and animations for a PSP-styled gameplay experience.</p>
 
-        <h3>Q10: Are there any map changes?</h3>
-        
+                <h3>Q10: Are there any map changes?</h3>
+
 
 <p>Yes, you’ll notice various map updates, including new interiors for Ryder’s house, the FIDL store, and other parts of Los Santos.</p>
 
-        <h3>Q11: How can I become a tester?</h3>
-        
+                <h3>Q11: How can I become a tester?</h3>
+
 
 <p>Just ask the owner. You can become a tester by expressing your interest and providing regular feedback. We are always looking for dedicated testers to improve the mod.</p>
 
-        <h3>Q12: Will the mod be compatible with other GTA San Andreas mods?</h3>
-        
+                <h3>Q12: Will the mod be compatible with other GTA San Andreas mods?</h3>
+
 
 <p>We try to ensure compatibility, but the mod is not compatible with SA-MP and Essentials Pack, especially the sidescreen mod. It is discouraged to download mods outside the modpack unless the owner specifies otherwise.</p>
 
-        <h3>Q13: How can I report bugs or issues with the mod?</h3>
-        
+                <h3>Q13: How can I report bugs or issues with the mod?</h3>
+
 
 <p>If you encounter any bugs or issues, please report them through our official channels. You can use our <a href="https://discord.gg/BUSkXeV9pv" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='inherit'">Discord server</a> or message the owner directly. Providing detailed information will help us resolve issues faster.</p>
-    
+
 </div>
 </section>
 
 
 
 <section id="requirements">
-    <h2><i class="fas fa-cogs section-icon"></i>Requirements</h2>
-    
+        <h2><i class="fas fa-cogs section-icon"></i>Requirements</h2>
+
 
 <div class="requirements-list">
-        
+
 
 <p>Ready to jump into Los Santos? Here’s what your PC needs:</p>
-        
+
 <ul>
-            
+
 <li><strong>Operating System:</strong> Windows 7 or later</li>
-            
+
 <li><strong>Processor:</strong> Dual-Core or similar</li>
-            
+
 <li><strong>Memory:</strong> 4 GB RAM</li>
-            
+
 <li><strong>Graphics:</strong> Integrated Graphics</li>
-            
+
 <li><strong>Storage:</strong> 3 GB Free Space</li>
-            
+
 <li><strong>Additional Requirements:</strong> Clean copy of GTA San Andreas, GTA SA EXE 1.0 US version, CLEO 4 and DYOM 8.1</li>
-        
+
 </ul>
-        
+
 
 <p>Ensure your system meets these requirements to enjoy a smooth gaming experience in San Andreas!</p>
-    
+
 </div>
 </section>
 
 <section id="credits">
-    <h2><i class="fas fa-star section-icon"></i>Credits</h2>
-    
+        <h2><i class="fas fa-star section-icon"></i>Credits</h2>
+
 
 <div class="credits-list">
-        <h3>Main Contributors</h3>
-        
+                <h3>Main Contributors</h3>
+
 <ul>
-            
+
 <li><strong>Abdullah</strong>: Lead Missions Designer, Model Creation, Website Development, Creative Suggestions, Writer, and Content Contributor.</li>
-            
+
 <li><strong>babamohammed2022</strong>: Project Owner, Lead Mission Designer, Storywriting, Visual Design, Model Design, Retextures, Concept Development, Supervision, Visual Assistance, and Animations (with credit to Yucark for the original work).</li>
-            
+
 <li><strong>FrankoU</strong>: Mapping Specialist, Screenshot Production, and Supervisory Role.</li>
-            
+
 <li><strong>Avixrune</strong>: Supervision, Creative Input, Design Suggestions, Voices, and Website Assistance.</li>
-            
+
 <li><strong>The Small Chese</strong>: Mission Design, Storywriting, Supervision, and Creative Direction.</li>
-            
+
 <li><strong>Mike</strong>: Missions, Storywriting, Model Design, Testing, Feedback, and In-game Photography.</li>
-            
+
 <li><strong>Cerdquad</strong>: Screenshots, Testing, and Animations (with credit to Yucark for the original work).</li>
-            
+
 <li><strong>GTAMissionsCreator</strong>: Video Recording, Testing, and Quality Assurance.</li>
-            
+
 <li><strong>Noobshakespeare</strong>: Retexturing and Testing.</li>
-            
+
 <li><strong>karammii</strong>: Billboards and Feedback.</li>
-        
+
 </ul>
 
-        <h3>Special Contributors</h3>
-        
+                <h3>Special Contributors</h3>
+
 <ul>
-            
+
 <li><strong>Rule Breakers</strong>: Environmental Mapping, Model Creation, and Promotional Screenshots.</li>
-            
+
 <li><strong>Bolszewik</strong>: In-game Photography (Screenshots).</li>
-            
+
 <li><strong>14todoeltiempodc</strong>: Weapon Retextures.</li>
-            
+
 <li><strong>NorthStationX</strong>: Billboards and In-game Advertising.</li>
-            
+
 <li><strong>Lost MC Claude</strong>: Bug Reporting and Testing.</li>
-            
+
 <li><strong>MAHMOGAMER</strong>: Project Supervision.</li>
-            
+
 <li><strong>Tix</strong>: Gameplay Testing.</li>
-            
+
 <li><strong>Raul</strong>: Retextures and Visual Enhancements.</li>
-        
+
 </ul>
 
-        <h3>Additional Credits</h3>
-        
+                <h3>Additional Credits</h3>
+
 
 <p>This modpack integrates exceptional work from numerous talented authors within the GTA modding community. Special thanks to <strong>Endochronic</strong>, <strong>SASquad</strong>, <strong>Yucark</strong>, <strong>TheMadeMan</strong>, and many others whose mods and creativity helped bring this project to life. Full credits and detailed acknowledgments can be found within the modpack files.</p>
-        
+
 
 <p>We deeply appreciate their incredible work and contributions, which have enhanced the experience of GTA San Andreas Stories.</p>
-    
+
 </div>
 </section>
 
 <section id="manual">
-  <h2><i class="fas fa-book section-icon"></i>Manual</h2>
-  
+    <h2><i class="fas fa-book section-icon"></i>Manual</h2>
+
 
 <p>Coming soon...</p>
 </section>
@@ -824,275 +830,168 @@ body.dark-mode #updates {
 </section>
 
 <section id="download">
-    <h2><i class="fas fa-download section-icon"></i>Download the Mod</h2>
-    
+        <h2><i class="fas fa-download section-icon"></i>Download the Mod</h2>
+
 
 <p>This section is in WIP.</p>
 </section>
 
 <section id="screenshots" class="promotional-screenshots">
-    <h2><i class="fas fa-image section-icon"></i>Promotional Screenshots</h2>
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/c.png" alt="Screenshot 1">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/Picsart_24-08-24_12-12-14-625.jpg" alt="Screenshot 2">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/image.png" alt="Screenshot 3">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/argentina-transformed.png" alt="Screenshot 4">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/likethat.jpg" alt="Screenshot 5">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale.PNG" alt="Screenshot 6">
-    <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale2.PNG" alt="Screenshot 7">
+        <h2><i class="fas fa-image section-icon"></i>Promotional Screenshots</h2>
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/c.png" alt="Screenshot 1">
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/Picsart_24-08-24_12-12-14-625.jpg" alt="Screenshot 2">
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/image.png" alt="Screenshot 3">
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/argentina-transformed.png" alt="Screenshot 4">
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/likethat.jpg" alt="Screenshot 5">
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale.PNG" alt="Screenshot 6">
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/upscale2.PNG" alt="Screenshot 7">
 </section>
 
 
 <style>
 :root {
-  --bg-color-light: #ffffff;
-  --text-color-light: #000000;
-  --bg-color-dark: #1e1e1e;
-  --text-color-dark: #f0f0f0;
-  --entry-bg-light: #f9f9f9;
-  --entry-bg-dark: #2b2b2b;
-  --meta-color-light: #666;
-  --meta-color-dark: #bbb;
-  --date-color-light: #000;
-  --date-color-dark: #fff;
-  --content-text-dark: #ddd;
-  --border-color-dark: #444;
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --bg-color-dark: #121212;
+    --text-color-dark: #e0e0e0;
+    --entry-bg-light: #f9f9f9;
+    --entry-bg-dark: #1e1e1e;
+    --meta-color-light: #666;
+    --meta-color-dark: #bbb;
 }
 
 body {
-  background-color: var(--bg-color-light);
-  color: var(--text-color-light);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-  }
+    body {
+        background-color: var(--bg-color-dark);
+        color: var(--text-color-dark);
+    }
 
-  .update-entry {
-    background-color: var(--entry-bg-dark);
-    border-color: var(--border-color-dark);
-  }
+    .update-entry {
+        background-color: var(--entry-bg-dark);
+    }
 
-  .update-heading {
-    border-bottom: 1px solid var(--border-color-dark);
-  }
+    .update-meta {
+        color: var(--meta-color-dark);
+    }
 
-  .update-meta {
-    color: var(--meta-color-dark);
-  }
-
-  .update-date {
-    color: var(--date-color-dark);
-  }
-
-  .update-content p {
-    color: var(--content-text-dark);
-  }
+    .update-heading,
+    .update-content p {
+        color: var(--text-color-dark); /* Change to use the dark text color */
+    }
 }
 
 .updates-section {
-  padding: 20px;
-  border-radius: 8px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .update-entry {
-  margin-bottom: 20px;
-  background-color: var(--entry-bg-light);
-  border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: var(--entry-bg-light);
+    border-radius: 8px;
+    padding: 15px;
 }
 
 .update-heading {
-  font-size: 20px;
-  margin-bottom: 5px;
-  border-bottom: 1px solid transparent;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .update-meta {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: var(--meta-color-light);
-}
-
-.update-date {
-  color: var(--date-color-light);
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--meta-color-light);
 }
 
 .update-content {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .update-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 10px;
+    width: 535px; /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 2px solid black; /* Black border */
 }
 
-
+.image-container {
+    background-color: var(--entry-bg-light); /* Match image background to entry background */
+    padding: 10px; /* Padding around the image */
+    border-radius: 8px; /* Optional: rounded corners for the box */
+    margin-top: 10px; /* Space above the box */
+    max-width: 600px; /* Optional: limit the container width */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+}
 </style>
 
 <section id="updates" class="updates-section">
-  
-<!-- Title with an icon -->
-  <h2 class="updates-title">
-    <i class="fas fa-bullhorn icon"></i> Updates
-  </h2>
+    <h2 class="updates-title" style="font-family: 'Orbitron', sans-serif; color: light-gray;">
+        <i class="fas fa-bullhorn icon"></i> Updates
+    </h2>
 
-  
-<!-- Single update entry -->
-  
-
-<div class="update-entry">
-    <h3 class="update-heading">New atmosphere</h3>
-
-    
-<!-- Author and date meta information -->
-    
-
-<div class="update-meta">
-      
-
-<span><strong>Author:</strong> 
-
-<span class="author-name">babamohammed2022
-</span>
-</span> |
-      
-
-<span class="update-date"><strong>Date:</strong> 
-
-<span class="date-text">20/09/2024
-</span>
-</span>
-    
-</div>
-
-    
-<!-- Update content paragraphs -->
-    
+    <div class="update-entry">
+        <h4 style="font-family: 'Orbitron', sans-serif; color: black; margin-bottom: 10px;">Update 1</h4>
+        <h3 class="update-heading" style="font-family: 'Orbitron', sans-serif; color: black;">New atmosphere</h3>
+        <div class="update-meta" style="font-family: 'Orbitron', sans-serif; color: black;">
+            <span><strong>Author:</strong> <span class="author-name">babamohammed2022</span></span> |
+            <span class="update-date"><strong>Date:</strong> <span class="date-text">20/09/2024</span></span>
+        </div>
 
 <div class="update-content">
-      
-
-<p>I'm excited to share some updates! Thanks to SkyGFX edits, the mod now has a better GTA Stories PSP vibe (similar to GTA VCS).</p>
-      
-
-<p>Some cars have been retextured and others have been added (credits to DirtyImpala for the Dewbauchee JB700).</p>
-      
-
-<p>Several bugs reported by the testers have been fixed, improving overall gameplay stability and performance.</p>
-      
-
-<p>Additionally, we're working on the game manual, which is currently 30% complete. It will include more info about the story, gangs, and more. Stay tuned for more updates!</p>
-    
+<p style="color: black;">Hey everyone! I'm super excited to share some updates!</p>
+<p style="color: black;">
+- <strong>SkyGFX edits:</strong> The mod now has an awesome GTA Stories PSP vibe, just like GTA VCS.<br>
+- <strong>Car updates:</strong> We've retextured some cars and added new ones (shoutout to DirtyImpala for the Dewbauchee JB700).<br>
+- <strong>Bug fixes:</strong> We've fixed a bunch of bugs reported by our testers, making the gameplay smoother and more stable.<br>
+- <strong>Game manual:</strong> We're still working on it and it's about 30% done. It'll have all the details about the story, gangs, and more. Stay tuned for more updates!
+</p>
 </div>
 
-    
-<!-- Image included with the update -->
-    <img src="https://raw.githubusercontent.com/babamohammed2022/hi/main/hka.PNG" alt="Update Image" class="update-image">
-  
-</div>
-
-  
-<style>
-    /* Apply default font to the body for light and dark modes */
-    body.light-mode, body.dark-mode {
-        font-family: 'Eurostile Next', sans-serif;
-    }
-
-    /* Use Orbitron for headers, titles, and section titles */
-    header, nav a, section h2, .credits-list h3 {
-        font-family: 'Orbitron', sans-serif;
-    }
-
-    /* Use Eurostile Next for paragraphs and list items */
-    section p, .credits-list ul li {
-        font-family: 'Eurostile Next', sans-serif;
-    }
-
-    /* Ensure dark mode uses Orbitron and Eurostile Next where needed */
-    body.dark-mode header, body.dark-mode nav, body.dark-mode section, body.dark-mode .credits-list h3 {
-        font-family: 'Orbitron', sans-serif;
-    }
-    body.dark-mode section p, body.dark-mode .credits-list ul li {
-        font-family: 'Eurostile Next', sans-serif;
-    }
-
-    /* Always keep the main text black */
-    #updates .update-heading,
-    #updates .update-meta span,
-    #updates .update-content p {
-        color: black;
-    }
-
-    /* Updates title: black in light mode, white in dark mode */
-    body.light-mode #updates .updates-title {
-        color: black;
-    }
-    body.dark-mode #updates .updates-title {
-        color: white;
-    }
-  
-</style>
-</section>
-
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/babamohammed2022/hi/main/hka.PNG" alt="Update Image" class="update-image">
+        </div>
+    </div>
 </section>
 
 
-<style>
-  /* Always keep the main text black */
-  #updates .update-heading,
-  #updates .update-meta span,
-  #updates .update-content p {
-    color: black;
-  }
-
-  /* Updates title - black in light mode, white in dark mode */
-  #updates .updates-title {
-    color: black; /* Default for light mode */
-  }
-
-  @media (prefers-color-scheme: dark) {
-    #updates .updates-title {
-      color: white; /* White in dark mode */
-    }
-  }
-
-</style>
-
-</section>
 
 
 
 <section id="release-date">
-    <h2><i class="fas fa-calendar section-icon"></i>Release Date</h2>
-    
+        <h2><i class="fas fa-calendar section-icon"></i>Release Date</h2>
+
 
 <div class="release-info">
-        
+
 
 <p>We're excited to announce that the alpha version of the mod is expected to become public in:</p>
-        
+
 
 <div class="release-date-info">
-            
+
 
 <p><strong>Expected Release Month:</strong></strong> October 2024</p>
-        
+
 </div>
-        
+
 
 <p>Stay tuned for more updates and exact release details as we approach the release month!</p>
-    
+
 </div>
 </section>
 
 
 <footer style="font-family: 'Orbitron', sans-serif;">
-    &copy; 2024 GTA San Andreas Stories. All rights reserved. 
+        &copy; 2024 GTA San Andreas Stories. All rights reserved.
 <br>
-    <strong>Disclaimer:</strong> This mod was made by fans who are not affiliated with Rockstar Games.
+        <strong>Disclaimer:</strong> This mod was made by fans who are not affiliated with Rockstar Games.
 </footer>
 
 <!-- Toggle Button -->
@@ -1100,184 +999,176 @@ body {
 
 
 <style>
-    .toggle-button {
-        background-color: #f0f0f0; /* Light mode button color */
-        color: #333; /* Text color for light mode */
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-family: 'Orbitron', sans-serif; /* Or your chosen font */
-        transition: background-color 0.3s, color 0.3s;
-    }
+        .toggle-button {
+                background-color: #f0f0f0; /* Light mode button color */
+                color: #333; /* Text color for light mode */
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-family: 'Orbitron', sans-serif; /* Or your chosen font */
+                transition: background-color 0.3s, color 0.3s;
+        }
 
-    .toggle-button:hover {
-        background-color: #ddd;
-    }
+        .toggle-button:hover {
+                background-color: #ddd;
+        }
 
-    /* Dark mode button styling */
-    body.dark-mode .toggle-button {
-        background-color: #333;
-        color: #f0f0f0;
-        border-color: #444;
-    }
+        /* Dark mode button styling */
+        body.dark-mode .toggle-button {
+                background-color: #333;
+                color: #f0f0f0;
+                border-color: #444;
+        }
 
-    body.dark-mode .toggle-button:hover {
-        background-color: #555;
-    }
+        body.dark-mode .toggle-button:hover {
+                background-color: #555;
+        }
 
 </style>
 
 
-<!-- Choose Mode Button -->
-<button id="chooseModeBtn">Choose Mode</button>
-
-<!-- Options container (initially hidden) -->
-<div id="options" style="display: none;">
-    <button id="lightMode" onclick="selectMode('light-mode')">Light Mode</button>
-    <button id="darkMode" onclick="selectMode('dark-mode')">Dark Mode</button>
-</div>
 
 <script>
-    // Function to toggle between light and dark mode
-    function toggleMode() {
-        var body = document.body;
-        if (body.classList.contains('light-mode')) {
-            body.classList.remove('light-mode');
-            body.classList.add('dark-mode');
-            localStorage.setItem('mode', 'dark-mode');
-        } else {
-            body.classList.remove('dark-mode');
-            body.classList.add('light-mode');
-            localStorage.setItem('mode', 'light-mode');
+        // Function to toggle between light and dark mode
+        function toggleMode() {
+                var body = document.body;
+                if (body.classList.contains('light-mode')) {
+                        body.classList.remove('light-mode');
+                        body.classList.add('dark-mode');
+                        localStorage.setItem('mode', 'dark-mode');
+                } else {
+                        body.classList.remove('dark-mode');
+                        body.classList.add('light-mode');
+                        localStorage.setItem('mode', 'light-mode');
+                }
         }
-    }
 
-    // Optional: Save the user's mode preference in localStorage
-    window.onload = function() {
-        var savedMode = localStorage.getItem('mode');
-        if (savedMode) {
-            document.body.classList.add(savedMode);
-        } else {
-            document.body.classList.add('light-mode'); // Default to light mode
-        }
-    };
+        // Optional: Save the user's mode preference in localStorage
+        window.onload = function() {
+                var savedMode = localStorage.getItem('mode');
+                if (savedMode) {
+                        document.body.classList.add(savedMode);
+                } else {
+                        document.body.classList.add('light-mode'); // Default to light mode
+                }
+        };
 
-    // Show options when the "Choose Mode" button is clicked
-    document.getElementById('chooseModeBtn').addEventListener('click', function() {
-        document.getElementById('options').style.display = 'block';
-    });
-
-    // Function to handle mode selection
-    function selectMode(mode) {
-        document.body.classList.remove('light-mode', 'dark-mode'); // Remove both modes
-        document.body.classList.add(mode); // Add the selected mode
-        localStorage.setItem('mode', mode); // Save the user's preference
-        document.getElementById('options').style.display = 'none'; // Hide options after selection
-    }
-</script>
-
-
-</script>
-  
-<script>
-        // Disable right-click context menu
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
+        // Show options when the "Choose Mode" button is clicked
+        document.getElementById('chooseModeBtn').addEventListener('click', function() {
+                document.getElementById('options').style.display = 'block';
         });
 
-        // Disable keyboard shortcuts like F12 and Ctrl+Shift+I (Inspect Element)
-        document.onkeydown = function(e) {
-            // Disable F12 (Dev Tools)
-            if (e.keyCode == 123) {
-                return false;
-            }
-            // Disable Ctrl+Shift+I (Inspect Element), Ctrl+Shift+J (Console), Ctrl+Shift+C (Inspect)
-            if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) {
-                return false;
-            }
-            // Disable Ctrl+U (View Source)
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                return false;
-            }
-        };
-    
+        // Function to handle mode selection
+        function selectMode(mode) {
+                document.body.classList.remove('light-mode', 'dark-mode'); // Remove both modes
+                document.body.classList.add(mode); // Add the selected mode
+                localStorage.setItem('mode', mode); // Save the user's preference
+                document.getElementById('options').style.display = 'none'; // Hide options after selection
+        }
+</script>
+
+
+</script>
+
+<script>
+                // Disable right-click context menu
+                document.addEventListener('contextmenu', function(e) {
+                        e.preventDefault();
+                });
+
+                // Disable keyboard shortcuts like F12 and Ctrl+Shift+I (Inspect Element)
+                document.onkeydown = function(e) {
+                        // Disable F12 (Dev Tools)
+                        if (e.keyCode == 123) {
+                                return false;
+                        }
+                        // Disable Ctrl+Shift+I (Inspect Element), Ctrl+Shift+J (Console), Ctrl+Shift+C (Inspect)
+                        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) {
+                                return false;
+                        }
+                        // Disable Ctrl+U (View Source)
+                        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                                return false;
+                        }
+                };
+
 </script>
 
 </head>
 
 
 <body>
-       
+
 <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const youtubeLinks = document.querySelectorAll('#youtube a');
+                document.addEventListener('DOMContentLoaded', () => {
+                        const youtubeLinks = document.querySelectorAll('#youtube a');
 
-            youtubeLinks.forEach(link => {
-                link.addEventListener('mouseover', () => {
-                    link.classList.add('easter-egg');
+                        youtubeLinks.forEach(link => {
+                                link.addEventListener('mouseover', () => {
+                                        link.classList.add('easter-egg');
+                                });
+
+                                link.addEventListener('mouseout', () => {
+                                        link.classList.remove('easter-egg');
+                                });
+                        });
                 });
 
-                link.addEventListener('mouseout', () => {
-                    link.classList.remove('easter-egg');
-                });
-            });
-        });
-    
 </script>
-     
+
 <script>
-        function BotDetector(args) {
-            var self = this;
-            self.isBot = false;
-            self.tests = {};
+                function BotDetector(args) {
+                        var self = this;
+                        self.isBot = false;
+                        self.tests = {};
 
-            var selectedTests = args.tests || [];
-            if (selectedTests.length == 0 || selectedTests.indexOf(BotDetector.Tests.SCROLL) != -1) {
-                self.tests[BotDetector.Tests.SCROLL] = function() {
-                    var e = function() {
-                        self.tests[BotDetector.Tests.SCROLL] = true;
-                        self.update()
-                        self.unbindEvent(window, BotDetector.Tests.SCROLL, e)
-                    };
-                    self.bindEvent(window, BotDetector.Tests.SCROLL, e);
-                };
-            }
+                        var selectedTests = args.tests || [];
+                        if (selectedTests.length == 0 || selectedTests.indexOf(BotDetector.Tests.SCROLL) != -1) {
+                                self.tests[BotDetector.Tests.SCROLL] = function() {
+                                        var e = function() {
+                                                self.tests[BotDetector.Tests.SCROLL] = true;
+                                                self.update()
+                                                self.unbindEvent(window, BotDetector.Tests.SCROLL, e)
+                                        };
+                                        self.bindEvent(window, BotDetector.Tests.SCROLL, e);
+                                };
+                        }
 
-            // Additional tests for mouse, key, and other actions
-            // ... (truncated for brevity)
+                        // Additional tests for mouse, key, and other actions
+                        // ... (truncated for brevity)
 
-            self.update = function(notify) {
-                var count = 0;
-                var tests = 0;
-                for (var i in self.tests) {
-                    if (self.tests.hasOwnProperty(i)) {
-                        count++;
-                    }
-                    tests++;
+                        self.update = function(notify) {
+                                var count = 0;
+                                var tests = 0;
+                                for (var i in self.tests) {
+                                        if (self.tests.hasOwnProperty(i)) {
+                                                count++;
+                                        }
+                                        tests++;
+                                }
+                                self.isBot = count == 0;
+                                if (self.isBot) {
+                                        // Send to server for blocking if a bot is detected
+                                        fetch('/block-ip', {
+                                                method: 'POST',
+                                                headers: {
+                                                        'Content-Type': 'application/json'
+                                                },
+                                                body: JSON.stringify({ botDetected: true })
+                                        });
+                                }
+                        };
                 }
-                self.isBot = count == 0;
-                if (self.isBot) {
-                    // Send to server for blocking if a bot is detected
-                    fetch('/block-ip', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ botDetected: true })
-                    });
-                }
-            };
-        }
 
-        var botDetector = new BotDetector({});
-        botDetector.update();
-    
+                var botDetector = new BotDetector({});
+                botDetector.update();
+
 <!-- Your other HTML content -->
 
 <!-- Secure Cookies -->
 <script>
-    document.cookie = "secureCookie=value; Secure; HttpOnly; SameSite=Strict;";
+        document.cookie = "secureCookie=value; Secure; HttpOnly; SameSite=Strict;";
 </script>
 
 <!-- 100% privacy-first analytics -->
@@ -1285,36 +1176,36 @@ body {
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
 <script>
-    // Rate Limiting (Basic Client-Side)
-    let requestCount = 0;
-    const limit = 100; // Example limit: 100 requests in 10 minutes
-    const timeFrame = 10 * 60 * 1000; // 10 minutes
+        // Rate Limiting (Basic Client-Side)
+        let requestCount = 0;
+        const limit = 100; // Example limit: 100 requests in 10 minutes
+        const timeFrame = 10 * 60 * 1000; // 10 minutes
 
-    setInterval(function() {
-        requestCount = 0; // Reset the request count every 10 minutes
-    }, timeFrame);
+        setInterval(function() {
+                requestCount = 0; // Reset the request count every 10 minutes
+        }, timeFrame);
 
-    document.addEventListener('click', function() {
-        requestCount++;
-        if (requestCount > limit) {
-            alert('Too many requests. Please try again later.');
-        }
-    });
-
-    // Input Validation Example
-    document.addEventListener('submit', function(event) {
-        const inputs = document.querySelectorAll('input, textarea');
-        let valid = true;
-        inputs.forEach(input => {
-            if (!input.value.trim()) {
-                valid = false;
-                alert('Please fill out all fields.');
-            }
+        document.addEventListener('click', function() {
+                requestCount++;
+                if (requestCount > limit) {
+                        alert('Too many requests. Please try again later.');
+                }
         });
-        if (!valid) {
-            event.preventDefault(); // Prevent form submission
-        }
-    });
+
+        // Input Validation Example
+        document.addEventListener('submit', function(event) {
+                const inputs = document.querySelectorAll('input, textarea');
+                let valid = true;
+                inputs.forEach(input => {
+                        if (!input.value.trim()) {
+                                valid = false;
+                                alert('Please fill out all fields.');
+                        }
+                });
+                if (!valid) {
+                        event.preventDefault(); // Prevent form submission
+                }
+        });
 </script>
 
 <!-- Your other HTML content -->
