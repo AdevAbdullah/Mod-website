@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -425,18 +424,6 @@ body.light-mode {
                                 padding: 10px;
                         }
                 }
-
-                .google-drive-icon {
-                        font-size: 2em;
-                        color: #4285F4;
-                        transition: transform 0.3s, color 0.3s;
-                }
-
-                .google-drive-icon:hover {
-                        color: #34a853; /* Change color on hover */
-                        transform: scale(1.1); /* Slightly enlarge the icon on hover */
-                }
-
                 /* Promotional Screenshots */
                 #screenshots {
                         background-color: #f2f2f2;
@@ -584,22 +571,6 @@ background-color: #000000; /* Black background on hover in dark mode */
         <a href="#release-date"><i class="fas fa-calendar icon"></i>Release Date</a>
     </nav>
 </header>
-
-<style>
-    nav a {
-        color: #000; /* Default color for links */
-        text-decoration: none; /* Remove underline */
-    }
-
-    nav a.easter-egg:hover {
-        color: #FF0000; /* YouTube Red on hover */
-    }
-
-    nav a.updates-link:hover {
-        color: #0078D4; /* Blue color on hover for Updates link */
-    }
-</style>
-
 
 
 <section id="info">
@@ -1063,182 +1034,225 @@ body {
 
 
 <script>
-        // Function to toggle between light and dark mode
-        function toggleMode() {
-                var body = document.body;
-                if (body.classList.contains('light-mode')) {
-                        body.classList.remove('light-mode');
-                        body.classList.add('dark-mode');
-                        localStorage.setItem('mode', 'dark-mode');
-                } else {
-                        body.classList.remove('dark-mode');
-                        body.classList.add('light-mode');
-                        localStorage.setItem('mode', 'light-mode');
-                }
+    "use strict"; // Enforce strict mode globally
+
+    // Toggle between light and dark mode securely
+    function toggleMode() {
+        const body = document.body;
+        const isLightMode = body.classList.contains('light-mode');
+        const newMode = isLightMode ? 'dark-mode' : 'light-mode';
+
+        // Update the mode class and store it securely in LocalStorage
+        body.classList.remove(isLightMode ? 'light-mode' : 'dark-mode');
+        body.classList.add(newMode);
+
+        try {
+            localStorage.setItem('mode', newMode);
+        } catch (e) {
+            console.error("LocalStorage is blocked or not available.", e);
+        }
+    }
+
+    // Apply saved or default mode based on the time of day
+    function applyInitialMode() {
+        let savedMode;
+        try {
+            savedMode = localStorage.getItem('mode');
+        } catch (e) {
+            console.warn("LocalStorage not available.", e);
         }
 
-        // Optional: Save the user's mode preference in localStorage
-        window.onload = function() {
-                var savedMode = localStorage.getItem('mode');
-                if (savedMode) {
-                        document.body.classList.add(savedMode);
-                } else {
-                        document.body.classList.add('light-mode'); // Default to light mode
-                }
-        };
+        if (savedMode) {
+            // Apply the saved mode
+            document.body.classList.add(savedMode);
+        } else {
+            // Set mode based on the time (AM -> light mode, PM -> dark mode)
+            const currentHour = new Date().getHours();
+            const defaultMode = currentHour >= 12 ? 'dark-mode' : 'light-mode';
+            document.body.classList.add(defaultMode);
 
-        // Show options when the "Choose Mode" button is clicked
-        document.getElementById('chooseModeBtn').addEventListener('click', function() {
+            // Store the mode in LocalStorage for future visits
+            try {
+                localStorage.setItem('mode', defaultMode);
+            } catch (e) {
+                console.error("LocalStorage is blocked or not available.", e);
+            }
+        }
+    }
+
+    // Add event listeners to elements that toggle mode
+    function initModeToggle() {
+        const chooseModeBtn = document.getElementById('chooseModeBtn');
+        if (chooseModeBtn) {
+            chooseModeBtn.addEventListener('click', () => {
                 document.getElementById('options').style.display = 'block';
-        });
-
-        // Function to handle mode selection
-        function selectMode(mode) {
-                document.body.classList.remove('light-mode', 'dark-mode'); // Remove both modes
-                document.body.classList.add(mode); // Add the selected mode
-                localStorage.setItem('mode', mode); // Save the user's preference
-                document.getElementById('options').style.display = 'none'; // Hide options after selection
+            }, { passive: true });
         }
-</script>
+    }
 
+    // Safely select and apply the chosen mode
+    function selectMode(mode) {
+        document.body.classList.remove('light-mode', 'dark-mode'); // Remove all modes
+        document.body.classList.add(mode);
 
-</script>
+        try {
+            localStorage.setItem('mode', mode); // Store mode preference
+        } catch (e) {
+            console.error("Failed to save mode preference.", e);
+        }
 
-<script>
-                // Disable right-click context menu
-                document.addEventListener('contextmenu', function(e) {
-                        e.preventDefault();
-                });
+        document.getElementById('options').style.display = 'none'; // Hide options
+    }
 
-                // Disable keyboard shortcuts like F12 and Ctrl+Shift+I (Inspect Element)
-                document.onkeydown = function(e) {
-                        // Disable F12 (Dev Tools)
-                        if (e.keyCode == 123) {
-                                return false;
-                        }
-                        // Disable Ctrl+Shift+I (Inspect Element), Ctrl+Shift+J (Console), Ctrl+Shift+C (Inspect)
-                        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) {
-                                return false;
-                        }
-                        // Disable Ctrl+U (View Source)
-                        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                                return false;
-                        }
-                };
+    // Disable right-click context menu for security
+    function disableContextMenu() {
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+    }
 
-</script>
+    // Disable developer tools shortcuts (like F12, Ctrl+Shift+I)
+    function disableDevToolsShortcuts() {
+        document.addEventListener('keydown', (e) => {
+            const forbiddenKeys = [123, 'I', 'C', 'J', 'U'];
+            const keyCodeChar = String.fromCharCode(e.keyCode);
+            const isForbiddenKey = forbiddenKeys.includes(e.keyCode) || forbiddenKeys.includes(keyCodeChar);
 
-</head>
+            if ((e.ctrlKey && e.shiftKey && isForbiddenKey) || e.keyCode === 123) {
+                e.preventDefault();
+            }
+        });
+    }
 
+    // Add hover effect to YouTube links without animation
+    function initEasterEggLinks() {
+        document.addEventListener('DOMContentLoaded', () => {
+            const youtubeLinks = document.querySelectorAll('#youtube a');
+            youtubeLinks.forEach(link => {
+                link.addEventListener('mouseover', () => link.classList.add('easter-egg'), { passive: true });
+                link.addEventListener('mouseout', () => link.classList.remove('easter-egg'), { passive: true });
+            });
+        });
+    }
 
-<body>
+    // Advanced Bot Detection class to detect bot-like behavior
+    class BotDetector {
+        constructor(tests = []) {
+            this.isBot = false;
+            this.tests = {};
+            this.selectedTests = tests;
 
-<script>
-                document.addEventListener('DOMContentLoaded', () => {
-                        const youtubeLinks = document.querySelectorAll('#youtube a');
+            this.initTests();
+            this.runTests();
+        }
 
-                        youtubeLinks.forEach(link => {
-                                link.addEventListener('mouseover', () => {
-                                        link.classList.add('easter-egg');
-                                });
+        initTests() {
+            if (this.selectedTests.includes(BotDetector.Tests.SCROLL)) {
+                this.bindScrollTest();
+            }
+        }
 
-                                link.addEventListener('mouseout', () => {
-                                        link.classList.remove('easter-egg');
-                                });
-                        });
-                });
+        // Bind scroll event for bot detection
+        bindScrollTest() {
+            const handleScroll = () => {
+                this.tests[BotDetector.Tests.SCROLL] = true;
+                this.runTests();
+                window.removeEventListener('scroll', handleScroll);
+            };
+            window.addEventListener('scroll', handleScroll, { passive: true });
+        }
 
-</script>
+        // Run tests to determine if the user is a bot
+        runTests() {
+            let passedTests = 0;
+            let totalTests = Object.keys(this.tests).length;
 
-<script>
-                function BotDetector(args) {
-                        var self = this;
-                        self.isBot = false;
-                        self.tests = {};
-
-                        var selectedTests = args.tests || [];
-                        if (selectedTests.length == 0 || selectedTests.indexOf(BotDetector.Tests.SCROLL) != -1) {
-                                self.tests[BotDetector.Tests.SCROLL] = function() {
-                                        var e = function() {
-                                                self.tests[BotDetector.Tests.SCROLL] = true;
-                                                self.update()
-                                                self.unbindEvent(window, BotDetector.Tests.SCROLL, e)
-                                        };
-                                        self.bindEvent(window, BotDetector.Tests.SCROLL, e);
-                                };
-                        }
-
-                        // Additional tests for mouse, key, and other actions
-                        // ... (truncated for brevity)
-
-                        self.update = function(notify) {
-                                var count = 0;
-                                var tests = 0;
-                                for (var i in self.tests) {
-                                        if (self.tests.hasOwnProperty(i)) {
-                                                count++;
-                                        }
-                                        tests++;
-                                }
-                                self.isBot = count == 0;
-                                if (self.isBot) {
-                                        // Send to server for blocking if a bot is detected
-                                        fetch('/block-ip', {
-                                                method: 'POST',
-                                                headers: {
-                                                        'Content-Type': 'application/json'
-                                                },
-                                                body: JSON.stringify({ botDetected: true })
-                                        });
-                                }
-                        };
+            for (let test in this.tests) {
+                if (this.tests.hasOwnProperty(test) && this.tests[test]) {
+                    passedTests++;
                 }
+            }
 
-                var botDetector = new BotDetector({});
-                botDetector.update();
+            this.isBot = passedTests === 0;
+            if (this.isBot) {
+                this.reportBot();
+            }
+        }
 
-<!-- Your other HTML content -->
+        // Report detected bot to the server
+        reportBot() {
+            fetch('/block-ip', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ botDetected: true })
+            }).catch(err => console.error("Bot detection reporting failed", err));
+        }
+    }
 
-<!-- Secure Cookies -->
-<script>
+    // Define available bot detection tests
+    BotDetector.Tests = {
+        SCROLL: 'scroll'
+    };
+
+    // Initialize the bot detection
+    function initBotDetection() {
+        const botDetector = new BotDetector([BotDetector.Tests.SCROLL]);
+    }
+
+    // Secure cookie with the HttpOnly, Secure, and SameSite=Strict attributes
+    function secureCookies() {
         document.cookie = "secureCookie=value; Secure; HttpOnly; SameSite=Strict;";
-</script>
+    }
 
-<!-- 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+    // Simple Analytics script for privacy-focused analytics
+    function loadAnalyticsScript() {
+        const script = document.createElement('script');
+        script.src = 'https://scripts.simpleanalyticscdn.com/latest.js';
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+    }
 
-<script>
-        // Rate Limiting (Basic Client-Side)
+    // Basic client-side rate limiting to avoid overloading
+    function initRateLimiting() {
         let requestCount = 0;
-        const limit = 100; // Example limit: 100 requests in 10 minutes
-        const timeFrame = 10 * 60 * 1000; // 10 minutes
+        const REQUEST_LIMIT = 100;
+        const TIME_FRAME = 10 * 60 * 1000; // 10 minutes
 
-        setInterval(function() {       // Javascript
-                requestCount = 0; // Reset the request count every 10 minutes
-        }, timeFrame);
+        setInterval(() => requestCount = 0, TIME_FRAME);
 
-        document.addEventListener('click', function() {
-                requestCount++;
-                if (requestCount > limit) {
-                        alert('Too many requests. Please try again later.');
-                }
-        });
+        document.addEventListener('click', () => {
+            requestCount++;
+            if (requestCount > REQUEST_LIMIT) {
+                alert('Too many requests. Please try again later.');
+            }
+        }, { passive: true });
+    }
 
-        // Input Validation Example
-        document.addEventListener('submit', function(event) {
-                const inputs = document.querySelectorAll('input, textarea');
-                let valid = true;
-                inputs.forEach(input => {
-                        if (!input.value.trim()) {
-                                valid = false;
-                                alert('Please fill out all fields.');
-                        }
-                });
-                if (!valid) {
-                        event.preventDefault(); // Prevent form submission
-                }
-        });
+    // Secure input validation to ensure all fields are filled before submission
+    function initInputValidation() {
+        document.addEventListener('submit', (event) => {
+            const inputs = document.querySelectorAll('input, textarea');
+            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+
+            if (!allFilled) {
+                event.preventDefault();
+                alert('Please fill out all fields.');
+            }
+        }, { passive: true });
+    }
+
+    // Initialize all features on window load
+    window.addEventListener('load', () => {
+        applyInitialMode();
+        initModeToggle();
+        disableContextMenu();
+        disableDevToolsShortcuts();
+        initEasterEggLinks();
+        initBotDetection();
+        secureCookies();
+        loadAnalyticsScript();
+        initRateLimiting();
+        initInputValidation();
+    });
 </script>
 
 <!-- Your other HTML content -->
