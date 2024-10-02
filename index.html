@@ -262,6 +262,29 @@ html {
     scroll-behavior: auto; /* No smooth scrolling */
 }
 
+/* Add this to your styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
 /* Section Dividers */
 section::before {
     content: "";
@@ -528,6 +551,9 @@ section img {
 </div>
 </section>
 
+<head>
+    <meta name="keywords" content="GTA San Andreas, CJ, Ryder, Big Smoke, Sweet, Kendl, Tenpenny, Catalina, Woozie, The Truth, Grove Street, Los Santos, San Fierro, Las Venturas, missions, storyline, gang wars, character arcs, plot twists, 90s hip hop, open world, cheats, Easter eggs, modding, fan theories, iconic moments, hidden secrets, character development, police pursuits, rival gangs, story progression, nostalgia">
+</head>
 
 
 <section id="requirements">
@@ -643,9 +669,9 @@ section img {
 
   <div class="youtube-container">
     <p style="flex: 1;">Check out our
-      <a href="https://www.youtube.com/@cerdopalo2394" target="_blank" 
+      <a href="https://www.youtube.com/@cerdopalo2394" target="_blank"
          style="color: red; text-decoration: none; font-weight: bold; transition: text-decoration 0.2s;"
-         onmouseover="this.style.textDecoration='underline';" 
+         onmouseover="this.style.textDecoration='underline';"
          onmouseout="this.style.textDecoration='none';">
         YouTube channel
       </a>
@@ -697,7 +723,7 @@ section img {
 
 <section id="download">
     <h2><i class="fas fa-download section-icon"></i> Download the Mod</h2>
-    
+
     <div class="download-block"> <!-- New parent block -->
         <div class="download-section">
             <div class="download-item" id="modpack">
@@ -1138,6 +1164,8 @@ body {
             }
         }
 
+
+
         // Bind scroll event for bot detection
         bindScrollTest() {
             const handleScroll = () => {
@@ -1215,32 +1243,38 @@ body {
         }, { passive: true });
     }
 
-    // Secure input validation to ensure all fields are filled before submission
-    function initInputValidation() {
-        document.addEventListener('submit', (event) => {
-            const inputs = document.querySelectorAll('input, textarea');
-            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+document.addEventListener("DOMContentLoaded", function() {
+    var script = document.createElement("script");
+    script.src = "your-script.js"; // Replace with your actual script URL
+    document.body.appendChild(script);
+}); // Closing the addEventListener method and function block
 
-            if (!allFilled) {
-                event.preventDefault();
-                alert('Please fill out all fields.');
-            }
-        }, { passive: true });
-    }
+// Secure input validation to ensure all fields are filled before submission
+function initInputValidation() {
+    document.addEventListener('submit', (event) => {
+        const inputs = document.querySelectorAll('input, textarea');
+        const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
 
-    // Initialize all features on window load
-    window.addEventListener('load', () => {
-        applyInitialMode();
-        initModeToggle();
-        disableContextMenu();
-        disableDevToolsShortcuts();
-        initEasterEggLinks();
-        initBotDetection();
-        secureCookies();
-        loadAnalyticsScript();
-        initRateLimiting();
-        initInputValidation();
-    });
+        if (!allFilled) {
+            event.preventDefault();
+            alert('Please fill out all fields.');
+        }
+    }, { passive: true });
+}
+
+// Initialize all features on window load
+window.addEventListener('load', () => {
+    applyInitialMode();
+    initModeToggle();
+    disableContextMenu();
+    disableDevToolsShortcuts();
+    initEasterEggLinks();
+    initBotDetection();
+    secureCookies();
+    loadAnalyticsScript();
+    initRateLimiting();
+    initInputValidation();
+});
 </script>
 
 <!-- Your other HTML content -->
