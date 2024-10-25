@@ -572,13 +572,13 @@ section:first-of-type::before {
         <!-- Download Buttons -->
         <div class="download-buttons">
             <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-beta.1/SA.CLEO_v5.0.0-beta.1+Silent_ASI_Loader.zip" class="btn-download" download style="text-decoration: none;">
-                <button class="download-btn">Download CLEO 5</button>
+                <button class="download-btn cleo5-btn">Download CLEO 5</button>
             </a>
             <a href="https://www.gtagarage.com/mods/download.php?f=35188" class="btn-download" download style="text-decoration: none;">
-                <button class="download-btn">Download DYOM 8.1</button>
+                <button class="download-btn dyom-btn">Download DYOM 8.1</button>
             </a>
             <a href="https://files2.sharemods.com/cgi-bin/dl.cgi/vzwets3hxucamblupfs7427gbfdzlegpu62ioyu6zkxu5xuv66eiwgy/CLEOPlus.zip" class="btn-download" download style="text-decoration: none;">
-                <button class="download-btn">Download CLEO+</button>
+                <button class="download-btn cleoplus-btn">Download CLEO+</button>
             </a>
         </div>
 
@@ -588,7 +588,6 @@ section:first-of-type::before {
 <style>
     .download-btn {
         padding: 10px 20px;
-        background-color: #4CAF50;
         color: white;
         border: none;
         border-radius: 5px;
@@ -596,22 +595,37 @@ section:first-of-type::before {
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .download-btn:hover {
-        background-color: #333; /* Darker color on hover */
-        transform: scale(1.05); /* Slightly enlarge the button */
+    /* Specific button colors */
+    .cleo5-btn {
+        background-color: #4CAF50; /* CLEO 5 */
+    }
+
+    .dyom-btn {
+        background-color: #2196F3; /* DYOM 8.1 */
+    }
+
+    .cleoplus-btn {
+        background-color: #FF9800; /* CLEO+ */
+    }
+
+    /* Hover effects with different colors for each button */
+    .cleo5-btn:hover {
+        background-color: #45a049; /* Slightly darker green */
+        transform: scale(1.05);
+    }
+
+    .dyom-btn:hover {
+        background-color: #1976D2; /* Slightly darker blue */
+        transform: scale(1.05);
+    }
+
+    .cleoplus-btn:hover {
+        background-color: #e68900; /* Slightly darker orange */
+        transform: scale(1.05);
     }
 
     .btn-download {
         text-decoration: none;
-    }
-
-    /* Specific colors for each button */
-    .btn-download:nth-of-type(2) .download-btn {
-        background-color: #2196F3; /* DYOM 8.1 */
-    }
-
-    .btn-download:nth-of-type(3) .download-btn {
-        background-color: #FF9800; /* CLEO+ */
     }
 </style>
 
