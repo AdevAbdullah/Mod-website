@@ -593,15 +593,13 @@ section:first-of-type::before {
 </div>
 
 
-<s<section id="video-section" style="max-width: 700px; margin: auto; padding: 16px; margin-top: 40px;"> <!-- Added margin-top -->
-    <section id="Trailer">
-        <h2 style="text-align: center; margin-bottom: 16px;">
-            <i class="fas fa-play" style="margin-right: 8px;"></i> Trailer
-        </h2>
-        <div class="video-container">
-            <!-- The iframe will be inserted here by JavaScript -->
-        </div>
-    </section>
+<section id="Trailer">
+    <h2>
+        <i class="fas fa-play" style="margin-right: 8px;"></i> Trailer
+    </h2>
+    <div class="video-container"> <!-- Video container centers and holds the video -->
+        <!-- The iframe will be inserted here by JavaScript -->
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -612,8 +610,8 @@ section:first-of-type::before {
             iframe.style.position = 'absolute';
             iframe.style.top = '0';
             iframe.style.left = '0';
-            iframe.width = '100%'; // Full width
-            iframe.height = '100%'; // Full height to fit aspect ratio
+            iframe.style.width = '100%'; 
+            iframe.style.height = '100%';
             iframe.src = videoUrl;
             iframe.frameBorder = '0';
             iframe.allowFullscreen = true;
@@ -624,29 +622,19 @@ section:first-of-type::before {
     </script>
 </section>
 
-
 <style>
     .video-container {
         width: 100%;
         max-width: 800px;
         margin: auto;
         position: relative;
-        padding-top: 54%; /* 16:9 Aspect Ratio */
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
         overflow: hidden;
-    }
-
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    h2 {
-        font-family: Arial, sans-serif; /* Optional: use a standard font */
+        border: none; /* Ensure no borders on video container */
     }
 </style>
+
+
 
 
 
