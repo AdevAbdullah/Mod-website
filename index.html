@@ -586,17 +586,17 @@ section:first-of-type::before {
      class="btn-download" download target="_blank">
     <button class="download-btn cleo4-btn">Download CLEO 4</button>
   </a>
-  
+
   <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-beta.1/SA.CLEO_v5.0.0-beta.1+Silent_ASI_Loader.zip"
      class="btn-download" download target="_blank">
     <button class="download-btn cleo5-btn">Download CLEO 5</button>
   </a>
-  
+
   <a href="https://www.gtagarage.com/mods/download.php?f=35188"
      class="btn-download" download target="_blank">
     <button class="download-btn dyom-btn">Download DYOM 8.1</button>
   </a>
-  
+
   <a href="https://files2.sharemods.com/cgi-bin/dl.cgi/vzwets3hxucamblupfs7427gbfdzlcnd57atgku6zkxu5xuv66eedta/CLEOPlus.zip"
      class="btn-download" download target="_blank">
     <button class="download-btn cleoplus-btn">Download CLEO+</button>
@@ -605,30 +605,72 @@ section:first-of-type::before {
 
 <!-- CSS Styles -->
 <style>
+  /* Wrapper styling for the download buttons */
+  .download-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+  }
+
   /* Common styling for all download buttons */
   .download-btn {
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1rem;
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-  /* Specific styling for CLEO 4 button */
+  /* Gradient background colors for each button */
   .cleo4-btn {
-    background-color: darkblue;
+      background: linear-gradient(135deg, #003366, #005599);
   }
 
-  /* Hover effect for CLEO 4 button */
-  .cleo4-btn:hover {
-    background-color: navy;
-    transform: scale(1.05); /* Zoom effect */
+  .cleo5-btn {
+      background: linear-gradient(135deg, #4CAF50, #388e3c);
   }
-  
-  /* Hover effect for other buttons with zoom effect */
-  .cleo5-btn:hover, .dyom-btn:hover, .cleoplus-btn:hover {
-    opacity: 0.9;
-    transform: scale(1.05); /* Zoom effect */
+
+  .dyom-btn {
+      background: linear-gradient(135deg, #2196F3, #1976D2);
+  }
+
+  .cleoplus-btn {
+      background: linear-gradient(135deg, #FF9800, #e67a00);
+  }
+
+  /* Hover effects */
+  .download-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Darken the gradient slightly on hover for each button */
+  .cleo4-btn:hover {
+      background: linear-gradient(135deg, #00224d, #003d6b);
+  }
+
+  .cleo5-btn:hover {
+      background: linear-gradient(135deg, #388e3c, #2e7d32);
+  }
+
+  .dyom-btn:hover {
+      background: linear-gradient(135deg, #1976D2, #1565C0);
+  }
+
+  .cleoplus-btn:hover {
+      background: linear-gradient(135deg, #e67a00, #d2691e);
+  }
+
+  /* Remove underline from links */
+  .btn-download {
+      text-decoration: none;
   }
 </style>
 
@@ -680,56 +722,6 @@ section:first-of-type::before {
 
 
 
-<style>
-    /* Style for the download buttons */
-    .download-buttons {
-        margin-top: 20px; /* Space above the buttons */
-        display: flex; /* Align buttons in a row */
-        gap: 10px; /* Space between buttons */
-    }
-
-    .download-btn {
-        padding: 10px 20px;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    /* Specific button colors */
-    .cleo5-btn {
-        background-color: #4CAF50; /* CLEO 5 */
-    }
-
-    .dyom-btn {
-        background-color: #2196F3; /* DYOM 8.1 */
-    }
-
-    .cleoplus-btn {
-        background-color: #FF9800; /* CLEO+ */
-    }
-
-    /* Hover effects with different colors for each button */
-    .cleo5-btn:hover {
-        background-color: #45a049; /* Slightly darker green */
-        transform: scale(1.05);
-    }
-
-    .dyom-btn:hover {
-        background-color: #1976D2; /* Slightly darker blue */
-        transform: scale(1.05);
-    }
-
-    .cleoplus-btn:hover {
-        background-color: #e68900; /* Slightly darker orange */
-        transform: scale(1.05);
-    }
-
-    .btn-download {
-        text-decoration: none;
-    }
-</style>
 
 
 <section id="credits">
