@@ -352,8 +352,9 @@ section:first-of-type::before {
         <a href="#screenshots"><i class="fas fa-image icon"></i>Screenshots</a>
         <a href="#updates" class="updates-link"><i class="fas fa-bullhorn icon"></i>Updates</a>
         <a href="#release-date"><i class="fas fa-calendar icon"></i>Release Date</a>
+        <a href="#Trailer"><i class="fas fa-play icon"></i>Trailer</a> <!-- New Trailer button -->
     </nav>
-    <button class="toggle-button">Toggle</button> <!-- Integrated button -->
+    <button class="toggle-button">Toggle</button>
 </header>
 
 <style>
@@ -592,32 +593,35 @@ section:first-of-type::before {
 </div>
 
 
-<section style="max-width: 700px; margin: auto; padding: 16px; margin-top: 40px;"> <!-- Added margin-top -->
-    <h2 style="text-align: center; margin-bottom: 16px;">Mod Trailer</h2>
-    <div class="video-container">
-        <!-- The iframe will be inserted here by JavaScript -->
-    </div>
+<section id="video-section" style="max-width: 700px; margin: auto; padding: 16px; margin-top: 40px;"> <!-- Added margin-top -->
+    <section id="Trailer">
+        <h2 style="text-align: center; margin-bottom: 16px;">Trailer</h2>
+        <div class="video-container">
+            <!-- The iframe will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoId = 'ntz0KzAum0A'; // YouTube Video ID
+            const videoUrl = 'https://www.youtube-nocookie.com/embed/' + videoId + '?start=0';
+
+            const iframe = document.createElement('iframe');
+            iframe.style.position = 'absolute';
+            iframe.style.top = '0';
+            iframe.style.left = '0';
+            iframe.width = '100%'; // Full width
+            iframe.height = '100%'; // Full height to fit aspect ratio
+            iframe.src = videoUrl;
+            iframe.frameBorder = '0';
+            iframe.allowFullscreen = true;
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+
+            document.querySelector('.video-container').appendChild(iframe);
+        });
+    </script>
 </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const videoId = 'ntz0KzAum0A'; // YouTube Video ID
-        const videoUrl = 'https://www.youtube-nocookie.com/embed/' + videoId + '?start=0';
-
-        const iframe = document.createElement('iframe');
-        iframe.style.position = 'absolute';
-        iframe.style.top = '0';
-        iframe.style.left = '0';
-        iframe.width = '100%'; // Full width
-        iframe.height = '100%'; // Full height to fit aspect ratio
-        iframe.src = videoUrl;
-        iframe.frameBorder = '0';
-        iframe.allowFullscreen = true;
-        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-
-        document.querySelector('.video-container').appendChild(iframe);
-    });
-</script>
 
 <style>
     .video-container {
