@@ -609,14 +609,15 @@ section:first-of-type::before {
   .download-buttons {
       margin-top: 20px;
       display: flex;
-      gap: 16px;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      gap: 12px;
       justify-content: center;
   }
 
   /* Common styling for all download buttons */
   .download-btn {
       color: white;
-      padding: 14px 28px;
+      padding: 10px 20px;
       border: none;
       border-radius: 50px;
       font-weight: bold;
@@ -625,6 +626,8 @@ section:first-of-type::before {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       font-size: 1rem;
       text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+      width: 100%; /* Full-width on mobile */
+      max-width: 200px; /* Limit width on larger screens */
   }
 
   /* Gradient background colors for each button */
@@ -646,7 +649,7 @@ section:first-of-type::before {
 
   /* Hover effects */
   .download-btn:hover {
-      transform: scale(1.1);
+      transform: scale(1.05); /* Slightly smaller hover scale for better mobile fit */
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
       text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   }
@@ -671,6 +674,18 @@ section:first-of-type::before {
   /* Remove underline from links */
   .btn-download {
       text-decoration: none;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+      .download-buttons {
+          gap: 8px; /* Smaller gap on mobile */
+      }
+
+      .download-btn {
+          padding: 8px 16px; /* Smaller padding on mobile */
+          font-size: 0.9rem; /* Slightly smaller font size on mobile */
+      }
   }
 </style>
 
