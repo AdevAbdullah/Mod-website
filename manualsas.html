@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA San Andreas Stories Manual</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #f5f5f5;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 100;
+            font-size: 2rem;
+        }
+        .arrow.left {
+            left: 0;
+        }
+        .arrow.right {
+            right: 0;
+        }
+        .credits {
+            padding: 20px;
+            background: #333;
+            border-top: 2px solid #f5f5f5;
+        }
+        .credits h2 {
+            margin-top: 0;
+            font-weight: 700;
+            color: #f5f5f5;
+        }
+        .credits p {
+            margin: 5px 0;
+            font-weight: 400;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slides">
+            <!-- Add images here -->
+            <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+            <!-- Add more slides as needed -->
+        </div>
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="credits">
+        <h2>Credits</h2>
+        <p>Babamohammed2022 - Owner, Picture Taking, Writing</p>
+        <p>Abdullah645 - Writing</p>
+        <p>Cerdquad - Taking Pictures</p>
+        <p>Avixrune - Suggestions</p>
+        <p>Frankou28 - Writing, Creation, Pictures, Styling</p>
+        <p>Mike - Taking Pictures</p>
+        <p>Cheseg - Remastered Ideas</p>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        // Optional: Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
