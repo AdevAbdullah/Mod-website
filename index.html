@@ -4,6 +4,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -573,35 +574,42 @@ section:first-of-type::before {
             <li><strong>Graphics:</strong> Integrated Graphics</li>
             <li><strong>Storage:</strong> 3 GB Free Space</li>
             <li>
-                <strong>Additional Requirements:</strong> Clean copy of GTA San Andreas, GTA SA EXE 1.0 US version, CLEO 4/CLEO 5, CLEO+ and DYOM 8.1.
+                <strong>Additional Requirements:</strong> Clean copy of GTA San Andreas, GTA SA EXE 1.0 US version, CLEO 4/CLEO 5, CLEO+ and DYOM 8.1. (can be found in the essentials pack)
             </li>
         </ul>
 
         <p>Ensure your system meets these requirements to enjoy a smooth gaming experience in San Andreas!</p>
     </div>
+<section>
+  <!-- Download Buttons -->
+  <div class="download-buttons">
+    <a href="https://github.com/cleolibrary/CLEO4/releases/download/v4.4.4/CLEO4.zip"
+       class="btn-download" download target="_blank">
+      <button class="download-btn cleo4-btn">Download CLEO 4</button>
+    </a>
+
+    <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-beta.1/SA.CLEO_v5.0.0-beta.1+Silent_ASI_Loader.zip"
+       class="btn-download" download target="_blank">
+      <button class="download-btn cleo5-btn">Download CLEO 5</button>
+    </a>
+
+    <a href="https://www.gtagarage.com/mods/download.php?f=35188"
+       class="btn-download" download target="_blank">
+      <button class="download-btn dyom-btn">Download DYOM 8.1</button>
+    </a>
+
+    <a href="https://www.mixmods.com.br/2023/10/cleoplus/"
+       class="btn-download" download target="_blank">
+      <button class="download-btn cleoplus-btn">Download CLEO+</button>
+    </a>
+
+    <!-- New "Download Essentials" Button -->
+    <a href="https://example.com/download-essentials.zip"
+       class="btn-download" download target="_blank">
+      <button class="download-btn essentials-btn">Download Essentials</button>
+    </a>
+  </div>
 </section>
-<!-- Download Buttons -->
-<div class="download-buttons">
-  <a href="https://github.com/cleolibrary/CLEO4/releases/download/v4.4.4/CLEO4.zip"
-     class="btn-download" download target="_blank">
-    <button class="download-btn cleo4-btn">Download CLEO 4</button>
-  </a>
-
-  <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-beta.1/SA.CLEO_v5.0.0-beta.1+Silent_ASI_Loader.zip"
-     class="btn-download" download target="_blank">
-    <button class="download-btn cleo5-btn">Download CLEO 5</button>
-  </a>
-
-  <a href="https://www.gtagarage.com/mods/download.php?f=35188"
-     class="btn-download" download target="_blank">
-    <button class="download-btn dyom-btn">Download DYOM 8.1</button>
-  </a>
-
-  <a href="https://www.mixmods.com.br/2023/10/cleoplus/"
-     class="btn-download" download target="_blank">
-    <button class="download-btn cleoplus-btn">Download CLEO+</button>
-  </a>
-</div>
 
 <!-- CSS Styles -->
 <style>
@@ -609,7 +617,7 @@ section:first-of-type::before {
   .download-buttons {
       margin-top: 20px;
       display: flex;
-      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      flex-wrap: wrap;
       gap: 12px;
       justify-content: center;
   }
@@ -626,8 +634,8 @@ section:first-of-type::before {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       font-size: 1rem;
       text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-      width: 100%; /* Full-width on mobile */
-      max-width: 200px; /* Limit width on larger screens */
+      width: 100%;
+      max-width: 200px;
   }
 
   /* Gradient background colors for each button */
@@ -647,9 +655,14 @@ section:first-of-type::before {
       background: linear-gradient(135deg, #FF9800, #e67a00);
   }
 
+  /* New red gradient for Download Essentials button */
+  .essentials-btn {
+      background: linear-gradient(135deg, #FF0000, #B22222);
+  }
+
   /* Hover effects */
   .download-btn:hover {
-      transform: scale(1.05); /* Slightly smaller hover scale for better mobile fit */
+      transform: scale(1.05);
       box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
       text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   }
@@ -671,6 +684,11 @@ section:first-of-type::before {
       background: linear-gradient(135deg, #e67a00, #d2691e);
   }
 
+  /* Darker red hover effect for Essentials button */
+  .essentials-btn:hover {
+      background: linear-gradient(135deg, #B22222, #8B0000);
+  }
+
   /* Remove underline from links */
   .btn-download {
       text-decoration: none;
@@ -679,12 +697,12 @@ section:first-of-type::before {
   /* Responsive adjustments */
   @media (max-width: 600px) {
       .download-buttons {
-          gap: 8px; /* Smaller gap on mobile */
+          gap: 8px;
       }
 
       .download-btn {
-          padding: 8px 16px; /* Smaller padding on mobile */
-          font-size: 0.9rem; /* Slightly smaller font size on mobile */
+          padding: 8px 16px;
+          font-size: 0.9rem;
       }
   }
 </style>
