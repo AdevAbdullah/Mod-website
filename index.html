@@ -580,132 +580,99 @@ section:first-of-type::before {
 
         <p>Ensure your system meets these requirements to enjoy a smooth gaming experience in San Andreas!</p>
     </div>
-<section>
-  <!-- Download Buttons -->
-  <div class="download-buttons">
-    <a href="https://github.com/cleolibrary/CLEO4/releases/download/v4.4.4/CLEO4.zip"
-       class="btn-download" download target="_blank">
-      <button class="download-btn cleo4-btn">Download CLEO 4</button>
-    </a>
-
-    <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-beta.1/SA.CLEO_v5.0.0-beta.1+Silent_ASI_Loader.zip"
-       class="btn-download" download target="_blank">
-      <button class="download-btn cleo5-btn">Download CLEO 5</button>
-    </a>
-
-    <a href="https://www.gtagarage.com/mods/download.php?f=35188"
-       class="btn-download" download target="_blank">
-      <button class="download-btn dyom-btn">Download DYOM 8.1</button>
-    </a>
-
-    <a href="https://www.mixmods.com.br/2023/10/cleoplus/"
-       class="btn-download" download target="_blank">
-      <button class="download-btn cleoplus-btn">Download CLEO+</button>
-    </a>
-
-    <!-- New "Download Essentials" Button -->
-    <a href="https://example.com/download-essentials.zip"
-       class="btn-download" download target="_blank">
-      <button class="download-btn essentials-btn">Download Essentials</button>
-    </a>
-  </div>
 </section>
 
-<!-- CSS Styles -->
+<!-- Download Buttons -->
+<div class="download-buttons">
+    <a href="https://github.com/cleolibrary/CLEO4/releases/download/v4.4.4/CLEO4.zip" class="btn-download" download target="_blank">
+      <button class="btn-download-custom cleo4-btn">Download CLEO 4</button>
+    </a>
+
+    <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-beta.1/SA.CLEO_v5.0.0-beta.1+Silent_ASI_Loader.zip" class="btn-download" download target="_blank">
+      <button class="btn-download-custom cleo5-btn">Download CLEO 5</button>
+    </a>
+
+    <a href="https://www.gtagarage.com/mods/download.php?f=35188" class="btn-download" download target="_blank">
+      <button class="btn-download-custom dyom-btn">Download DYOM 8.1</button>
+    </a>
+
+    <a href="https://www.mixmods.com.br/2023/10/cleoplus/" class="btn-download" download target="_blank">
+      <button class="btn-download-custom cleoplus-btn">Download CLEO+</button>
+      
+    <a href="https://www.mediafire.com/file/pw94wuhxg49xli6/GTA_SAS_essentials_pack.rar/file" class="btn-download" download target="_blank">
+        <button class="btn-download-custom essent-btn">Download Essential Packs</button>
+    </a>
+</div>
+
 <style>
-  /* Wrapper styling for the download buttons */
-  .download-buttons {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-  }
+.download-buttons {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+}
 
-  /* Common styling for all download buttons */
-  .download-btn {
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 50px;
-      font-weight: bold;
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      font-size: 1rem;
-      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      max-width: 200px;
-  }
+.btn-download-custom {
+  padding: 10px 15px; /* Adds padding for a better touch target */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  color: white; /* Text color */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
 
-  /* Gradient background colors for each button */
-  .cleo4-btn {
-      background: linear-gradient(135deg, #003366, #005599);
-  }
+/* Button Background Colors */
+.cleo4-btn {
+  background-color: #4CAF50; /* Green */
+}
 
-  .cleo5-btn {
-      background: linear-gradient(135deg, #4CAF50, #388e3c);
-  }
+.cleo5-btn {
+  background-color: #2196F3; /* Blue */
+}
 
-  .dyom-btn {
-      background: linear-gradient(135deg, #2196F3, #1976D2);
-  }
+.dyom-btn {
+  background-color: #FF9800; /* Orange */
+}
 
-  .cleoplus-btn {
-      background: linear-gradient(135deg, #FF9800, #e67a00);
-  }
+.cleoplus-btn {
+  background-color: #9C27B0; /* Purple */
+}
 
-  /* New red gradient for Download Essentials button */
-  .essentials-btn {
-      background: linear-gradient(135deg, #FF0000, #B22222);
-  }
+.essent-btn {
+  background-color: #f44336; /* Red */
+}
 
-  /* Hover effects */
-  .download-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
-      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
+/* Hover effects */
+.btn-download-custom:hover {
+  opacity: 1; /* Ensure full opacity on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
 
-  /* Darken the gradient slightly on hover for each button */
-  .cleo4-btn:hover {
-      background: linear-gradient(135deg, #00224d, #003d6b);
-  }
+/* Specific hover background colors */
+.cleo4-btn:hover {
+  background-color: #45a049; /* Darker green */
+}
 
-  .cleo5-btn:hover {
-      background: linear-gradient(135deg, #388e3c, #2e7d32);
-  }
+.cleo5-btn:hover {
+  background-color: #1e88e5; /* Darker blue */
+}
 
-  .dyom-btn:hover {
-      background: linear-gradient(135deg, #1976D2, #1565C0);
-  }
+.dyom-btn:hover {
+  background-color: #fb8c00; /* Darker orange */
+}
 
-  .cleoplus-btn:hover {
-      background: linear-gradient(135deg, #e67a00, #d2691e);
-  }
+.cleoplus-btn:hover {
+  background-color: #8e24aa; /* Darker purple */
+}
 
-  /* Darker red hover effect for Essentials button */
-  .essentials-btn:hover {
-      background: linear-gradient(135deg, #B22222, #8B0000);
-  }
-
-  /* Remove underline from links */
-  .btn-download {
-      text-decoration: none;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-      .download-buttons {
-          gap: 8px;
-      }
-
-      .download-btn {
-          padding: 8px 16px;
-          font-size: 0.9rem;
-      }
-  }
+.essent-btn:hover {
+  background-color: #d32f2f; /* Darker red */
+}
 </style>
+
+
+
+
+
 
 <section id="Trailer">
     <h2>
