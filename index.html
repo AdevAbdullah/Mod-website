@@ -683,27 +683,25 @@ section:first-of-type::before {
     <h2>
         <i class="fas fa-play" style="margin-right: 8px;"></i> Trailer
     </h2>
-    <div class="video-container"> <!-- Video container centers and holds the video -->
-        <!-- The iframe will be inserted here by JavaScript -->
-    </div>
+    <div class="video-container"></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const videoId = 'lRn2nKz5hg8'; // YouTube Video ID
-            const videoUrl = 'https://www.youtube-nocookie.com/embed/' + videoId + '?start=0';
+            var videoId = 'lRn2nKz5hg8';
+            var videoUrl = 'https://www.youtube-nocookie.com/embed/' + videoId;
 
-            const iframe = document.createElement('iframe');
+            var iframe = document.createElement('iframe');
             iframe.style.position = 'absolute';
             iframe.style.top = '0';
             iframe.style.left = '0';
-            iframe.style.width = '100%'; 
+            iframe.style.width = '100%';
             iframe.style.height = '100%';
             iframe.src = videoUrl;
             iframe.frameBorder = '0';
             iframe.allowFullscreen = true;
-            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-
-            document.querySelector('.video-container').appendChild(iframe);
+            
+            var videoContainer = document.querySelector('.video-container');
+            videoContainer.appendChild(iframe);
         });
     </script>
 </section>
@@ -714,12 +712,11 @@ section:first-of-type::before {
         max-width: 800px;
         margin: auto;
         position: relative;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        padding-top: 56.25%;
         overflow: hidden;
-        border: none; /* Ensure no borders on video container */
+        border: none;
     }
 </style>
-
 
 
 
@@ -823,6 +820,7 @@ section:first-of-type::before {
     </p>
     <a href="https://www.youtube.com/@cerdopalo2394" target="_blank">
       <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/unnamed.jpg" alt="YouTube Profile" style="width: 80px; height: 80px; border-radius: 50%; transition: transform 0.3s;">
+      
     </a>
   </div>
 </section>
@@ -877,14 +875,14 @@ section:first-of-type::before {
     <div class="download-block">
         <div class="download-section">
             <div class="download-item" id="modpack">
-                <a href="https://drive.google.com/file/d/1ePdp317lu5NaW1XAt29S1K_NmeGXGCd_/view?usp=sharing" 
+                <a href="https://drive.google.com/file/d/11m0eBDquQkscYmAv72iHdAZwvfwt18Nt/view?usp=sharing" 
                    target="_blank" 
                    onclick="ga('send', 'event', 'Download', 'Click', 'Modpack');">
                     <h3 class="hover-effect">Modpack</h3>
                 </a>
             </div>
             <div class="download-item" id="storyline">
-                <a href="https://drive.google.com/file/d/1_fAZM4RTt34aCJtQxkzsjvxNi_Z6h_Wo/view?usp=sharing" 
+                <a href="https://drive.google.com/file/d/1rkqx96dJZK58ORkelBrjUYB5Bg6OibDt/view?usp=sharing" 
                    target="_blank" 
                    onclick="ga('send', 'event', 'Download', 'Click', 'Storyline');">
                     <h3 class="hover-effect">Storyline</h3>
