@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -627,6 +628,10 @@ section:first-of-type::before {
 .download-buttons {
   display: flex;
   gap: 10px; /* Adds space between buttons */
+  justify-content: center; /* Centers buttons horizontally */
+  align-items: center; /* Centers buttons vertically */
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+  width: 100%;
 }
 
 .btn-download-custom {
@@ -702,7 +707,7 @@ section:first-of-type::before {
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var videoId = 'lRn2nKz5hg8';
-            var videoUrl = 'https://www.youtube-nocookie.com/embed/' + videoId;
+            var videoUrl = 'https://www.youtube.com/embed/' + videoId;
 
             var iframe = document.createElement('iframe');
             iframe.style.position = 'absolute';
